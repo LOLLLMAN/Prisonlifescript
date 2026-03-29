@@ -3768,7 +3768,7 @@ function library:esp_preview(properties)
             CornerRadius = dim(0, 7)
         });
 
-        -- Header bar
+        -- Header
         items["header"] = library:create("Frame", {
             Parent = items["inline"];
             Name = "\0";
@@ -3784,7 +3784,7 @@ function library:esp_preview(properties)
             CornerRadius = dim(0, 7)
         });
 
-        -- Bottom square fill so header corners don't bleed into viewport
+        -- Square fill so header rounded bottom doesn't gap against viewport
         library:create("Frame", {
             Parent = items["header"];
             Name = "\0";
@@ -3811,7 +3811,7 @@ function library:esp_preview(properties)
             BorderColor3 = rgb(0, 0, 0);
             Parent = items["header"];
             AnchorPoint = vec2(0, 0.5);
-            Image = "rbxassetid://10723346959";
+            Image = "rbxassetid://16149070644";
             BackgroundTransparency = 1;
             Position = dim2(0, 10, 0.5, 0);
             Name = "\0";
@@ -3846,8 +3846,8 @@ function library:esp_preview(properties)
             Position = dim2(0, 0, 0, 35);
             Size = dim2(1, 0, 0, 210);
             Name = "\0";
-            Ambient = rgb(160, 160, 170);
-            LightColor = rgb(210, 215, 255);
+            Ambient = rgb(255, 255, 255);
+            LightColor = rgb(255, 255, 255);
             LightDirection = vec3(-1, -2, -1);
         });
 
@@ -3868,47 +3868,43 @@ function library:esp_preview(properties)
             BackgroundColor3 = rgb(22, 22, 24)
         });
 
-        -- WorldModel so the character renders with proper lighting
+        -- WorldModel required for correct lighting in ViewportFrame
         items["world_model"] = library:create("WorldModel", {
             Parent = items["viewport"];
         });
 
         character.Parent = items["world_model"]
 
-        -- Point light on the root so it illuminates evenly
+        -- Flood the scene so no part renders dark
         local root = character:FindFirstChild("HumanoidRootPart")
         if root then
             library:create("PointLight", {
                 Parent = root;
-                Brightness = 2.5;
-                Range = 22;
+                Brightness = 5;
+                Range = 30;
                 Color = rgb(255, 255, 255);
             })
         end
 
         items["camera"] = library:create("Camera", {
             FieldOfView = 60;
-            CameraType = Enum.CameraType.Track;
-            CFrame = cfr(0, 0, 0);
-            Focus = cfr(0, 0, 0);
+            CameraType = Enum.CameraType.Custom;
             Parent = items["world_model"];
             Name = "\0"
         });
 
         items["viewport"].CurrentCamera = items["camera"]
 
-        local humanoid = character:FindFirstChildOfClass("Humanoid")
-        items["camera"].CameraSubject = humanoid
-
         library:connection(run.RenderStepped, function()
             cfg.rotation += 0.5
             character:SetPrimaryPartCFrame(
                 cfr(Vector3.new(0, 1, -6)) * angle(0, math.rad(cfg.rotation), 0)
             )
+            items["camera"].CFrame = cfr(Vector3.new(0, 2, -1.5), Vector3.new(0, 1, -6))
         end)
     end
 
-    -- ESP overlay objects parented inside the viewport
+    -- ESP overlays
     local objects = cfg.objects; do
         objects["holder"] = library:create("Frame", {
             Parent = items["viewport"];
@@ -3931,10 +3927,10 @@ function library:esp_preview(properties)
             Text = string.format("%s (@%s)", lp.DisplayName, lp.Name);
             Name = "\0";
             TextStrokeTransparency = 0;
-            AnchorPoint = vec2(0, 1);
+            AnchorPoint = vec2(0.5, 1);
             Size = dim2(1, 0, 0, 0);
             BackgroundTransparency = 1;
-            Position = dim2(0, 0, 0, -4);
+            Position = dim2(0.5, 0, 0, -4);
             BorderSizePixel = 0;
             AutomaticSize = Enum.AutomaticSize.Y;
             TextSize = 11;
@@ -4099,7 +4095,6 @@ function library:esp_preview(properties)
     end)
 
     function cfg.refresh_elements()
-        -- Enabled
         objects["holder"].Parent = (flags["Enabled"] ~= false) and items["viewport"] or library["other"]
 
         -- Names
