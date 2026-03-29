@@ -3737,7 +3737,6 @@ function library:esp_preview(properties)
     pcall(function() character.Animate:Destroy() end)
 
     local items = cfg.items; do
-        -- Outer container styled like a section
         items["outline"] = library:create("Frame", {
             Parent = self.items["elements"];
             Name = "\0";
@@ -3769,7 +3768,7 @@ function library:esp_preview(properties)
             CornerRadius = dim(0, 7)
         });
 
-        -- Header bar (matches section style)
+        -- Header bar
         items["header"] = library:create("Frame", {
             Parent = items["inline"];
             Name = "\0";
@@ -3783,6 +3782,18 @@ function library:esp_preview(properties)
         library:create("UICorner", {
             Parent = items["header"];
             CornerRadius = dim(0, 7)
+        });
+
+        -- Bottom square fill so header corners don't bleed into viewport
+        library:create("Frame", {
+            Parent = items["header"];
+            Name = "\0";
+            AnchorPoint = vec2(0, 1);
+            Position = dim2(0, 0, 1, 0);
+            BorderColor3 = rgb(0, 0, 0);
+            Size = dim2(1, 0, 0, 7);
+            BorderSizePixel = 0;
+            BackgroundColor3 = rgb(19, 19, 21)
         });
 
         library:create("Frame", {
@@ -3826,33 +3837,18 @@ function library:esp_preview(properties)
             BackgroundColor3 = rgb(255, 255, 255)
         });
 
-       -- Viewport container for proper scaling
-        items["viewport_container"] = library:create("Frame", {
-            Parent = items["inline"];
-            BackgroundTransparency = 1;
-            BorderSizePixel = 0;
-            Position = dim2(0, 0, 0, 35);
-            Size = dim2(1, 0, 0, 0);
-            Name = "\0";
-            AutomaticSize = Enum.AutomaticSize.Y;
-        });
-
         -- Viewport
         items["viewport"] = library:create("ViewportFrame", {
-            Parent = items["viewport_container"];
-            BackgroundColor3 = rgb(16, 16, 18);
+            Parent = items["inline"];
+            BackgroundColor3 = rgb(14, 14, 16);
             BackgroundTransparency = 0;
             BorderSizePixel = 0;
-            Position = dim2(0, 0, 0, 0);
-            Size = dim2(1, 0, 1, 0);
+            Position = dim2(0, 0, 0, 35);
+            Size = dim2(1, 0, 0, 210);
             Name = "\0";
-        });
-
-        -- Aspect ratio constraint to maintain proportions and scale properly
-        library:create("UIAspectRatioConstraint", {
-            Parent = items["viewport"];
-            AspectRatio = 1.15;
-            AspectType = Enum.AspectType.FitWithinMaxSize;
+            Ambient = rgb(160, 160, 170);
+            LightColor = rgb(210, 215, 255);
+            LightDirection = vec3(-1, -2, -1);
         });
 
         library:create("UICorner", {
@@ -3860,45 +3856,49 @@ function library:esp_preview(properties)
             CornerRadius = dim(0, 7)
         });
 
-        -- Subtle gradient overlay to blend bottom into section
-        library:create("UIGradient", {
-            Parent = items["viewport"];
-            Rotation = 90;
-            Transparency = numseq{
-                numkey(0, 0),
-                numkey(0.7, 0),
-                numkey(1, 0.6)
-            };
-            Color = rgbseq{
-                rgbkey(0, rgb(16, 16, 18)),
-                rgbkey(1, rgb(16, 16, 18))
-            }
-        });
-
-        -- Bottom padding frame
-		library:create("Frame", {
-            Parent = items["viewport_container"];
+        -- Bottom padding so inline AutomaticSize has breathing room
+        library:create("Frame", {
+            Parent = items["inline"];
             Name = "\0";
             BackgroundTransparency = 1;
-            Position = dim2(0, 0, 1, 0);
+            Position = dim2(0, 0, 0, 245);
             BorderColor3 = rgb(0, 0, 0);
-            Size = dim2(1, 0, 0, 8);
+            Size = dim2(1, 0, 0, 10);
             BorderSizePixel = 0;
             BackgroundColor3 = rgb(22, 22, 24)
         });
 
+        -- WorldModel so the character renders with proper lighting
+        items["world_model"] = library:create("WorldModel", {
+            Parent = items["viewport"];
+        });
+
+        character.Parent = items["world_model"]
+
+        -- Point light on the root so it illuminates evenly
+        local root = character:FindFirstChild("HumanoidRootPart")
+        if root then
+            library:create("PointLight", {
+                Parent = root;
+                Brightness = 2.5;
+                Range = 22;
+                Color = rgb(255, 255, 255);
+            })
+        end
+
         items["camera"] = library:create("Camera", {
-            FieldOfView = 70;
+            FieldOfView = 60;
             CameraType = Enum.CameraType.Track;
             CFrame = cfr(0, 0, 0);
             Focus = cfr(0, 0, 0);
-            Parent = ws;
+            Parent = items["world_model"];
             Name = "\0"
         });
 
         items["viewport"].CurrentCamera = items["camera"]
-        character.Parent = items["viewport"]
-        items["camera"].CameraSubject = character
+
+        local humanoid = character:FindFirstChildOfClass("Humanoid")
+        items["camera"].CameraSubject = humanoid
 
         library:connection(run.RenderStepped, function()
             cfg.rotation += 0.5
