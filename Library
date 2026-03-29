@@ -3784,7 +3784,6 @@ function library:esp_preview(properties)
             CornerRadius = dim(0, 7)
         });
 
-        -- Square fill so header rounded bottom doesn't gap against viewport
         library:create("Frame", {
             Parent = items["header"];
             Name = "\0";
@@ -3837,14 +3836,14 @@ function library:esp_preview(properties)
             BackgroundColor3 = rgb(255, 255, 255)
         });
 
-        -- Viewport
+        -- Viewport — reduced height so ESP section stays on screen
         items["viewport"] = library:create("ViewportFrame", {
             Parent = items["inline"];
             BackgroundColor3 = rgb(14, 14, 16);
             BackgroundTransparency = 0;
             BorderSizePixel = 0;
             Position = dim2(0, 0, 0, 35);
-            Size = dim2(1, 0, 0, 210);
+            Size = dim2(1, 0, 0, 160);
             Name = "\0";
             Ambient = rgb(255, 255, 255);
             LightColor = rgb(255, 255, 255);
@@ -3856,26 +3855,25 @@ function library:esp_preview(properties)
             CornerRadius = dim(0, 7)
         });
 
-        -- Bottom padding so inline AutomaticSize has breathing room
+        -- Bottom padding
         library:create("Frame", {
             Parent = items["inline"];
             Name = "\0";
             BackgroundTransparency = 1;
-            Position = dim2(0, 0, 0, 245);
+            Position = dim2(0, 0, 0, 195);
             BorderColor3 = rgb(0, 0, 0);
-            Size = dim2(1, 0, 0, 10);
+            Size = dim2(1, 0, 0, 8);
             BorderSizePixel = 0;
             BackgroundColor3 = rgb(22, 22, 24)
         });
 
-        -- WorldModel required for correct lighting in ViewportFrame
+        -- WorldModel for proper lighting
         items["world_model"] = library:create("WorldModel", {
             Parent = items["viewport"];
         });
 
         character.Parent = items["world_model"]
 
-        -- Flood the scene so no part renders dark
         local root = character:FindFirstChild("HumanoidRootPart")
         if root then
             library:create("PointLight", {
@@ -3887,7 +3885,7 @@ function library:esp_preview(properties)
         end
 
         items["camera"] = library:create("Camera", {
-            FieldOfView = 60;
+            FieldOfView = 55;
             CameraType = Enum.CameraType.Custom;
             Parent = items["world_model"];
             Name = "\0"
@@ -3897,10 +3895,12 @@ function library:esp_preview(properties)
 
         library:connection(run.RenderStepped, function()
             cfg.rotation += 0.5
+            -- character further back on Z so it appears smaller/full body
             character:SetPrimaryPartCFrame(
-                cfr(Vector3.new(0, 1, -6)) * angle(0, math.rad(cfg.rotation), 0)
+                cfr(Vector3.new(0, 1, -12)) * angle(0, math.rad(cfg.rotation), 0)
             )
-            items["camera"].CFrame = cfr(Vector3.new(0, 2, -1.5), Vector3.new(0, 1, -6))
+            -- camera looks at character center from a slight elevation
+            items["camera"].CFrame = cfr(Vector3.new(0, 2.5, -5), Vector3.new(0, 1, -12))
         end)
     end
 
@@ -3910,15 +3910,14 @@ function library:esp_preview(properties)
             Parent = items["viewport"];
             Name = "\0";
             BackgroundTransparency = 1;
-            Position = dim2(0.5, 0, 0.5, 10);
+            Position = dim2(0.5, 0, 0.5, 5);
             BorderColor3 = rgb(0, 0, 0);
-            Size = dim2(0, 115, 0, 175);
+            Size = dim2(0, 75, 0, 120);
             BorderSizePixel = 0;
             AnchorPoint = vec2(0.5, 0.5);
             BackgroundColor3 = rgb(255, 255, 255)
         });
 
-        -- Name label
         objects["name"] = library:create("TextLabel", {
             FontFace = fonts.small;
             Parent = library["other"];
@@ -3937,7 +3936,6 @@ function library:esp_preview(properties)
             BackgroundColor3 = rgb(255, 255, 255)
         });
 
-        -- Normal box
         objects["box_handler"] = library:create("Frame", {
             Parent = library["other"];
             Name = "\0";
@@ -3977,7 +3975,6 @@ function library:esp_preview(properties)
             LineJoinMode = Enum.LineJoinMode.Miter
         });
 
-        -- Corner boxes
         objects["corners"] = library:create("Frame", {
             Parent = library["other"];
             Name = "\0";
@@ -4022,7 +4019,6 @@ function library:esp_preview(properties)
             });
         end
 
-        -- Healthbar
         objects["healthbar_holder"] = library:create("Frame", {
             AnchorPoint = vec2(1, 0);
             Parent = library["other"];
@@ -4044,7 +4040,6 @@ function library:esp_preview(properties)
             BackgroundColor3 = rgb(0, 255, 0)
         });
 
-        -- Distance label
         objects["distance"] = library:create("TextLabel", {
             FontFace = fonts.small;
             TextColor3 = (flags["Distance_Color"] and flags["Distance_Color"].Color) or rgb(0, 255, 0);
@@ -4062,7 +4057,6 @@ function library:esp_preview(properties)
             BackgroundColor3 = rgb(255, 255, 255)
         });
 
-        -- Weapon label
         objects["weapon"] = library:create("TextLabel", {
             FontFace = fonts.small;
             TextColor3 = (flags["Weapon_Color"] and flags["Weapon_Color"].Color) or rgb(0, 255, 255);
@@ -4081,7 +4075,6 @@ function library:esp_preview(properties)
         });
     end
 
-    -- Animate healthbar
     task.spawn(function()
         while items["viewport"] and items["viewport"].Parent do
             task.wait()
@@ -4097,13 +4090,9 @@ function library:esp_preview(properties)
     function cfg.refresh_elements()
         objects["holder"].Parent = (flags["Enabled"] ~= false) and items["viewport"] or library["other"]
 
-        -- Names
         objects["name"].Parent = flags["Names"] and objects["holder"] or library["other"]
-        if flags["Name_Color"] then
-            objects["name"].TextColor3 = flags["Name_Color"].Color
-        end
+        if flags["Name_Color"] then objects["name"].TextColor3 = flags["Name_Color"].Color end
 
-        -- Boxes
         local isCorner = flags["Box_Type"] == "Corner"
         if flags["Boxes"] then
             objects["corners"].Parent     = isCorner and objects["holder"] or library["other"]
@@ -4125,20 +4114,13 @@ function library:esp_preview(properties)
             end
         end
 
-        -- Healthbar
         objects["healthbar_holder"].Parent = flags["Healthbar"] and objects["holder"] or library["other"]
 
-        -- Distance
         objects["distance"].Parent = flags["Distance"] and objects["holder"] or library["other"]
-        if flags["Distance_Color"] then
-            objects["distance"].TextColor3 = flags["Distance_Color"].Color
-        end
+        if flags["Distance_Color"] then objects["distance"].TextColor3 = flags["Distance_Color"].Color end
 
-        -- Weapon
         objects["weapon"].Parent = flags["Weapon"] and objects["holder"] or library["other"]
-        if flags["Weapon_Color"] then
-            objects["weapon"].TextColor3 = flags["Weapon_Color"].Color
-        end
+        if flags["Weapon_Color"] then objects["weapon"].TextColor3 = flags["Weapon_Color"].Color end
     end
 
     cfg.refresh_elements()
