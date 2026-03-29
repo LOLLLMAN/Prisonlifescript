@@ -3800,7 +3800,7 @@ function library:esp_preview(properties)
             BorderColor3 = rgb(0, 0, 0);
             Parent = items["header"];
             AnchorPoint = vec2(0, 0.5);
-            Image = "rbxassetid://16149070644";
+            Image = "rbxassetid://10723346959";
             BackgroundTransparency = 1;
             Position = dim2(0, 10, 0.5, 0);
             Name = "\0";
@@ -3826,15 +3826,33 @@ function library:esp_preview(properties)
             BackgroundColor3 = rgb(255, 255, 255)
         });
 
+       -- Viewport container for proper scaling
+        items["viewport_container"] = library:create("Frame", {
+            Parent = items["inline"];
+            BackgroundTransparency = 1;
+            BorderSizePixel = 0;
+            Position = dim2(0, 0, 0, 35);
+            Size = dim2(1, 0, 0, 0);
+            Name = "\0";
+            AutomaticSize = Enum.AutomaticSize.Y;
+        });
+
         -- Viewport
         items["viewport"] = library:create("ViewportFrame", {
-            Parent = items["inline"];
+            Parent = items["viewport_container"];
             BackgroundColor3 = rgb(16, 16, 18);
             BackgroundTransparency = 0;
             BorderSizePixel = 0;
-            Position = dim2(0, 0, 0, 35);
-            Size = dim2(1, 0, 0, 200);
+            Position = dim2(0, 0, 0, 0);
+            Size = dim2(1, 0, 1, 0);
             Name = "\0";
+        });
+
+        -- Aspect ratio constraint to maintain proportions and scale properly
+        library:create("UIAspectRatioConstraint", {
+            Parent = items["viewport"];
+            AspectRatio = 1.15;
+            AspectType = Enum.AspectType.FitWithinMaxSize;
         });
 
         library:create("UICorner", {
@@ -3858,11 +3876,11 @@ function library:esp_preview(properties)
         });
 
         -- Bottom padding frame
-        library:create("Frame", {
-            Parent = items["inline"];
+		library:create("Frame", {
+            Parent = items["viewport_container"];
             Name = "\0";
             BackgroundTransparency = 1;
-            Position = dim2(0, 0, 0, 235);
+            Position = dim2(0, 0, 1, 0);
             BorderColor3 = rgb(0, 0, 0);
             Size = dim2(1, 0, 0, 8);
             BorderSizePixel = 0;
