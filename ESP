@@ -382,7 +382,7 @@ function esp:create_object(player)
 
     -- ── chams ─────────────────────────────────────────────
     objects["chams_highlight"] = nil  -- created on demand
-    objects["chams_3d"]        = nil  -- created on demand
+    data.chams_3d_quads        = {}   -- Drawing.Quad per body part
 
     -- ── chams functions ───────────────────────────────────
     data.apply_chams = function()
@@ -437,24 +437,31 @@ function esp:create_object(player)
     data.apply_chams_3d = function()
         local char = data.info.character
         if not char then return end
-        if objects["chams_3d"] then
-            objects["chams_3d"]:Destroy()
+        data.remove_chams_3d()
+        for _, part in char:GetChildren() do
+            if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
+                local quads = {}
+                for i = 1, 6 do
+                    local q        = Drawing.new("Quad")
+                    q.Filled       = true
+                    q.Color        = flags["Chams_3D_Color"].Color
+                    q.Transparency = 0.5
+                    q.Thickness    = 1
+                    q.Visible      = false
+                    quads[i]       = q
+                end
+                data.chams_3d_quads[part] = quads
+            end
         end
-        local h = Instance.new("Highlight")
-        h.FillTransparency   = 1
-        h.OutlineColor3      = flags["Chams_3D_Color"].Color
-        h.OutlineTransparency= 0
-        h.DepthMode          = Enum.HighlightDepthMode.AlwaysOnTop
-        h.Adornee            = char
-        h.Parent             = char
-        objects["chams_3d"]  = h
     end
 
     data.remove_chams_3d = function()
-        if objects["chams_3d"] then
-            objects["chams_3d"]:Destroy()
-            objects["chams_3d"] = nil
+        for _, quads in data.chams_3d_quads do
+            for _, q in quads do
+                pcall(function() q:Remove() end)
+            end
         end
+        data.chams_3d_quads = {}
     end
 
     -- ── data functions ────────────────────────────────────
@@ -509,8 +516,8 @@ function esp:remove_object(player)
     local holder = esp[player.Name]
     if not holder then return end
 
-    pcall(function() holder.data.remove_chams()    end)
-    pcall(function() holder.data.remove_chams_3d() end)
+    pcall(function() holder.remove_chams()    end)
+    pcall(function() holder.remove_chams_3d() end)
 
     for _, line in holder.drawings do
         if type(line) == "userdata" then
@@ -629,12 +636,9 @@ function esp.refresh_elements()
 
         -- 3d chams
         if flags["Chams_3D"] then
-            if not objects["chams_3d"] then data.apply_chams_3d() end
-            if objects["chams_3d"] then
-                objects["chams_3d"].OutlineColor3 = flags["Chams_3D_Color"].Color
-            end
+            if not next(data.chams_3d_quads) then data.apply_chams_3d() end
         else
-            if objects["chams_3d"] then data.remove_chams_3d() end
+            if next(data.chams_3d_quads) then data.remove_chams_3d() end
         end
     end
 end
@@ -701,7 +705,7 @@ esp.connection = run.RenderStepped:Connect(function()
                 tracer.From        = vec2(vs.X/2, oy)
                 tracer.To          = vec2(box_pos.X + box_size.X/2, box_pos.Y + box_size.Y)
                 tracer.Color       = flags["Tracers_Color"].Color
-                tracer.Transparency= flags["Tracers_Color"].Transparency or 0
+                tracer.Transparency = 1  -- Drawing API: 1=opaque, 0=invisible
                 tracer.Thickness   = 1
                 tracer.Visible     = true
             else
@@ -713,15 +717,57 @@ esp.connection = run.RenderStepped:Connect(function()
         local oof = data.drawings["oof"]
         if oof then
             if flags["OOF_Arrows"] and not on_screen and humanoid.RootPart then
-                local ex, ey, ang = get_oof_edge(humanoid.RootPart.Position)
-                local s = flags["OOF_Size"] or 14
-                oof.PointA = vec2(ex + math.cos(ang)*s,            ey + math.sin(ang)*s)
-                oof.PointB = vec2(ex + math.cos(ang+2.5)*(s*0.5),  ey + math.sin(ang+2.5)*(s*0.5))
-                oof.PointC = vec2(ex + math.cos(ang-2.5)*(s*0.5),  ey + math.sin(ang-2.5)*(s*0.5))
-                oof.Color  = flags["OOF_Color"].Color
-                oof.Visible= true
+                local vs     = camera.ViewportSize
+                local cx, cy = vs.X / 2, vs.Y / 2
+                local sp     = esp:get_screen_pos(humanoid.RootPart.Position)
+                local ang    = math.atan2(sp.Y - cy, sp.X - cx)
+                local r      = 100
+                local s      = flags["OOF_Size"] or 14
+                local co, si = math.cos(ang), math.sin(ang)
+                local ox, oy = cx + r * co, cy + r * si
+                oof.PointA   = vec2(ox + co * s,                        oy + si * s)
+                oof.PointB   = vec2(ox - co * (s*0.5) - si * (s*0.5),  oy - si * (s*0.5) + co * (s*0.5))
+                oof.PointC   = vec2(ox - co * (s*0.5) + si * (s*0.5),  oy - si * (s*0.5) - co * (s*0.5))
+                oof.Color    = flags["OOF_Color"].Color
+                oof.Visible  = true
             else
                 oof.Visible = false
+            end
+        end
+
+        -- 3d chams quads (runs even when off-screen box)
+        if flags["Chams_3D"] then
+            for part, quads in data.chams_3d_quads do
+                if part and part.Parent then
+                    local pctr = camera:WorldToViewportPoint(part.Position)
+                    if pctr.Z > 0 then
+                        local cf       = part.CFrame
+                        local hx,hy,hz = part.Size.X*.5, part.Size.Y*.5, part.Size.Z*.5
+                        local p1 = camera:WorldToViewportPoint((cf*cfr(-hx, hy,-hz)).p)
+                        local p2 = camera:WorldToViewportPoint((cf*cfr(-hx, hy, hz)).p)
+                        local p3 = camera:WorldToViewportPoint((cf*cfr( hx, hy, hz)).p)
+                        local p4 = camera:WorldToViewportPoint((cf*cfr( hx, hy,-hz)).p)
+                        local p5 = camera:WorldToViewportPoint((cf*cfr(-hx,-hy,-hz)).p)
+                        local p6 = camera:WorldToViewportPoint((cf*cfr(-hx,-hy, hz)).p)
+                        local p7 = camera:WorldToViewportPoint((cf*cfr( hx,-hy, hz)).p)
+                        local p8 = camera:WorldToViewportPoint((cf*cfr( hx,-hy,-hz)).p)
+                        local col = flags["Chams_3D_Color"].Color
+                        -- top
+                        quads[1].PointA=vec2(p1.X,p1.Y); quads[1].PointB=vec2(p2.X,p2.Y); quads[1].PointC=vec2(p3.X,p3.Y); quads[1].PointD=vec2(p4.X,p4.Y)
+                        -- bottom
+                        quads[2].PointA=vec2(p5.X,p5.Y); quads[2].PointB=vec2(p6.X,p6.Y); quads[2].PointC=vec2(p7.X,p7.Y); quads[2].PointD=vec2(p8.X,p8.Y)
+                        -- sides
+                        quads[3].PointA=vec2(p1.X,p1.Y); quads[3].PointB=vec2(p2.X,p2.Y); quads[3].PointC=vec2(p6.X,p6.Y); quads[3].PointD=vec2(p5.X,p5.Y)
+                        quads[4].PointA=vec2(p2.X,p2.Y); quads[4].PointB=vec2(p3.X,p3.Y); quads[4].PointC=vec2(p7.X,p7.Y); quads[4].PointD=vec2(p6.X,p6.Y)
+                        quads[5].PointA=vec2(p3.X,p3.Y); quads[5].PointB=vec2(p4.X,p4.Y); quads[5].PointC=vec2(p8.X,p8.Y); quads[5].PointD=vec2(p7.X,p7.Y)
+                        quads[6].PointA=vec2(p4.X,p4.Y); quads[6].PointB=vec2(p1.X,p1.Y); quads[6].PointC=vec2(p5.X,p5.Y); quads[6].PointD=vec2(p8.X,p8.Y)
+                        for _, q in quads do q.Color = col; q.Visible = true end
+                    else
+                        for _, q in quads do q.Visible = false end
+                    end
+                else
+                    for _, q in quads do q.Visible = false end
+                end
             end
         end
 
@@ -756,9 +802,6 @@ esp.connection = run.RenderStepped:Connect(function()
         -- chams color live update
         if flags["Chams"] and objects["chams_highlight"] then
             objects["chams_highlight"].FillColor = flags["Chams_Color"].Color
-        end
-        if flags["Chams_3D"] and objects["chams_3d"] then
-            objects["chams_3d"].OutlineColor3 = flags["Chams_3D_Color"].Color
         end
     end
 end)
