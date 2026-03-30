@@ -72,7 +72,7 @@ local flags = {
 
     -- ── chams ──────────────────────────────────────────
     ["Chams"]       = false;
-    ["Chams_Color"] = { Color = rgb(255, 0, 0), Transparency = 0.9 };
+    ["Chams_Color"] = { Color = rgb(255, 0, 0), Transparency = 0.4 };
 
     -- ── 3d chams ───────────────────────────────────────
     ["Chams_3D"]           = false;
