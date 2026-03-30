@@ -49,8 +49,8 @@ local flags = {
     ["Box_Fill"]              = false;
     ["Box_Fill_Color"]        = { Color = rgb(255,255,255), Transparency = 0.85 };
     ["Box_Fill_Gradient"]     = false;
-    ["Box_Fill_Gradient_Top"] = { Color = rgb(0,120,255) };
-    ["Box_Fill_Gradient_Bot"] = { Color = rgb(0,0,100) };
+    ["Box_Fill_Gradient_Top"] = { Color = rgb(255, 255, 255) };
+    ["Box_Fill_Gradient_Bot"] = { Color = rgb(255, 0, 0) };
 
     -- ── health text ────────────────────────────────────
     ["Health_Text"]       = false;
@@ -72,11 +72,11 @@ local flags = {
 
     -- ── chams ──────────────────────────────────────────
     ["Chams"]       = false;
-    ["Chams_Color"] = { Color = rgb(255,50,50), Transparency = 0.4 };
+    ["Chams_Color"] = { Color = rgb(255, 0, 0), Transparency = 0.9 };
 
     -- ── 3d chams ───────────────────────────────────────
     ["Chams_3D"]           = false;
-    ["Chams_3D_Color"]     = { Color = rgb(255,50,50) };
+    ["Chams_3D_Color"]     = { Color = rgb(255, 0, 0) };
     ["Chams_3D_Thickness"] = 0.04;
 
     -- ── position offsets (pixels) ─────────────────────
