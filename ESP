@@ -407,7 +407,7 @@ function esp:create_object(player)
         if not objects["chams_highlight"] then
             local h = Instance.new("Highlight")
             h.FillColor          = flags["Chams_Color"].Color
-            h.FillTransparency   = 0.3
+            h.FillTransparency   = 0.95
             h.OutlineTransparency= 1
             h.DepthMode          = Enum.HighlightDepthMode.AlwaysOnTop
             h.Adornee            = char
