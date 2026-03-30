@@ -3736,144 +3736,81 @@ function library:esp_preview(properties)
     local character = lp.Character:Clone()
     pcall(function() character.Animate:Destroy() end)
 
-    -- ─── Floating panel ScreenGui (lives outside the main UI) ───────────────
     local panel_sgui = library:create("ScreenGui", {
-        Parent = coregui;
-        Name = "\0";
-        Enabled = false;                      -- hidden by default
+        Parent = coregui; Name = "\0";
+        Enabled = false;
         ZIndexBehavior = Enum.ZIndexBehavior.Global;
         IgnoreGuiInset = true;
     })
 
-    -- Outer shell (matches Milenium section outline style)
     local panel_outline = library:create("Frame", {
-        Parent = panel_sgui;
-        Name = "\0";
-        Size = dim2(0, 260, 0, 280);
-        Position = dim2(0, 20, 0.5, -140);   -- default: left side of screen
-        BorderColor3 = rgb(0, 0, 0);
-        BorderSizePixel = 0;
+        Parent = panel_sgui; Name = "\0";
+        Size = dim2(0, 260, 0, 300);
+        Position = dim2(0, 20, 0.5, -150);
+        BorderColor3 = rgb(0, 0, 0); BorderSizePixel = 0;
         BackgroundColor3 = rgb(25, 25, 29)
     })
-
-    library:create("UICorner", {
-        Parent = panel_outline;
-        CornerRadius = dim(0, 7)
-    })
-
+    library:create("UICorner", { Parent = panel_outline; CornerRadius = dim(0, 7) })
     library:create("UIStroke", {
-        Color = rgb(23, 23, 29);
-        Parent = panel_outline;
+        Color = rgb(23, 23, 29); Parent = panel_outline;
         ApplyStrokeMode = Enum.ApplyStrokeMode.Border
     })
-
-    -- Glow / shadow
     library:create("ImageLabel", {
-        ImageColor3 = rgb(0, 0, 0);
-        ScaleType = Enum.ScaleType.Slice;
-        Parent = panel_outline;
-        BorderColor3 = rgb(0, 0, 0);
-        Name = "\0";
-        BackgroundColor3 = rgb(255, 255, 255);
-        Size = dim2(1, 60, 1, 60);
-        AnchorPoint = vec2(0.5, 0.5);
-        Image = "rbxassetid://112971167999062";
-        BackgroundTransparency = 1;
-        Position = dim2(0.5, 0, 0.5, 0);
-        SliceScale = 0.75;
-        ZIndex = -1;
-        BorderSizePixel = 0;
+        ImageColor3 = rgb(0, 0, 0); ScaleType = Enum.ScaleType.Slice;
+        Parent = panel_outline; BorderColor3 = rgb(0, 0, 0); Name = "\0";
+        BackgroundColor3 = rgb(255, 255, 255); Size = dim2(1, 60, 1, 60);
+        AnchorPoint = vec2(0.5, 0.5); Image = "rbxassetid://112971167999062";
+        BackgroundTransparency = 1; Position = dim2(0.5, 0, 0.5, 0);
+        SliceScale = 0.75; ZIndex = -1; BorderSizePixel = 0;
         SliceCenter = rect(vec2(112, 112), vec2(147, 147))
     })
 
     local panel_inline = library:create("Frame", {
-        Parent = panel_outline;
-        Name = "\0";
-        Position = dim2(0, 1, 0, 1);
-        BorderColor3 = rgb(0, 0, 0);
-        Size = dim2(1, -2, 1, -2);
-        BorderSizePixel = 0;
+        Parent = panel_outline; Name = "\0";
+        Position = dim2(0, 1, 0, 1); BorderColor3 = rgb(0, 0, 0);
+        Size = dim2(1, -2, 1, -2); BorderSizePixel = 0;
         BackgroundColor3 = rgb(22, 22, 24)
     })
+    library:create("UICorner", { Parent = panel_inline; CornerRadius = dim(0, 7) })
 
-    library:create("UICorner", {
-        Parent = panel_inline;
-        CornerRadius = dim(0, 7)
-    })
-
-    -- Header bar
     local panel_header = library:create("Frame", {
-        Parent = panel_inline;
-        Name = "\0";
-        Position = dim2(0, 0, 0, 0);
-        BorderColor3 = rgb(0, 0, 0);
-        Size = dim2(1, 0, 0, 35);
-        BorderSizePixel = 0;
-        BackgroundColor3 = rgb(19, 19, 21)
+        Parent = panel_inline; Name = "\0"; Position = dim2(0, 0, 0, 0);
+        BorderColor3 = rgb(0, 0, 0); Size = dim2(1, 0, 0, 35);
+        BorderSizePixel = 0; BackgroundColor3 = rgb(19, 19, 21)
     })
-
-    library:create("UICorner", {
-        Parent = panel_header;
-        CornerRadius = dim(0, 7)
-    })
-
-    -- Fill gap between header rounded bottom and viewport
+    library:create("UICorner", { Parent = panel_header; CornerRadius = dim(0, 7) })
     library:create("Frame", {
-        Parent = panel_header;
-        Name = "\0";
-        AnchorPoint = vec2(0, 1);
-        Position = dim2(0, 0, 1, 0);
-        BorderColor3 = rgb(0, 0, 0);
-        Size = dim2(1, 0, 0, 7);
-        BorderSizePixel = 0;
-        BackgroundColor3 = rgb(19, 19, 21)
+        Parent = panel_header; Name = "\0"; AnchorPoint = vec2(0, 1);
+        Position = dim2(0, 0, 1, 0); BorderColor3 = rgb(0, 0, 0);
+        Size = dim2(1, 0, 0, 7); BorderSizePixel = 0; BackgroundColor3 = rgb(19, 19, 21)
     })
-
     library:create("Frame", {
-        AnchorPoint = vec2(0, 1);
-        Parent = panel_header;
-        Position = dim2(0, 0, 1, 0);
-        BorderColor3 = rgb(0, 0, 0);
-        Size = dim2(1, 0, 0, 1);
-        BorderSizePixel = 0;
-        BackgroundColor3 = rgb(36, 36, 37)
+        AnchorPoint = vec2(0, 1); Parent = panel_header;
+        Position = dim2(0, 0, 1, 0); BorderColor3 = rgb(0, 0, 0);
+        Size = dim2(1, 0, 0, 1); BorderSizePixel = 0; BackgroundColor3 = rgb(36, 36, 37)
     })
 
     local header_icon = library:create("ImageLabel", {
-        ImageColor3 = themes.preset.accent;
-        BorderColor3 = rgb(0, 0, 0);
-        Parent = panel_header;
-        AnchorPoint = vec2(0, 0.5);
-        Image = "rbxassetid://10723346959";
-        BackgroundTransparency = 1;
-        Position = dim2(0, 10, 0.5, 0);
-        Name = "\0";
-        Size = dim2(0, 22, 0, 22);
-        BorderSizePixel = 0;
-        BackgroundColor3 = rgb(255, 255, 255)
+        ImageColor3 = themes.preset.accent; BorderColor3 = rgb(0, 0, 0);
+        Parent = panel_header; AnchorPoint = vec2(0, 0.5);
+        Image = "rbxassetid://10723346959"; BackgroundTransparency = 1;
+        Position = dim2(0, 10, 0.5, 0); Name = "\0"; Size = dim2(0, 22, 0, 22);
+        BorderSizePixel = 0; BackgroundColor3 = rgb(255, 255, 255)
     }); library:apply_theme(header_icon, "accent", "ImageColor3")
 
     library:create("TextLabel", {
-        FontFace = fonts.font;
-        TextColor3 = rgb(255, 255, 255);
-        BorderColor3 = rgb(0, 0, 0);
-        Text = "ESP Preview";
-        Parent = panel_header;
-        Name = "\0";
-        Size = dim2(0, 0, 1, 0);
-        Position = dim2(0, 40, 0, -1);
-        BackgroundTransparency = 1;
-        TextXAlignment = Enum.TextXAlignment.Left;
-        BorderSizePixel = 0;
-        AutomaticSize = Enum.AutomaticSize.X;
-        TextSize = 16;
+        FontFace = fonts.font; TextColor3 = rgb(255, 255, 255);
+        BorderColor3 = rgb(0, 0, 0); Text = "ESP Preview";
+        Parent = panel_header; Name = "\0"; Size = dim2(0, 0, 1, 0);
+        Position = dim2(0, 40, 0, -1); BackgroundTransparency = 1;
+        TextXAlignment = Enum.TextXAlignment.Left; BorderSizePixel = 0;
+        AutomaticSize = Enum.AutomaticSize.X; TextSize = 16;
         BackgroundColor3 = rgb(255, 255, 255)
     })
 
-    -- Draggable via header
+    -- Drag
     do
         local dragging, start_pos, start_frame_pos = false, nil, nil
-
         panel_header.InputBegan:Connect(function(input)
             if input.UserInputType == Enum.UserInputType.MouseButton1 then
                 dragging = true
@@ -3881,13 +3818,11 @@ function library:esp_preview(properties)
                 start_frame_pos = panel_outline.Position
             end
         end)
-
         panel_header.InputEnded:Connect(function(input)
             if input.UserInputType == Enum.UserInputType.MouseButton1 then
                 dragging = false
             end
         end)
-
         library:connection(uis.InputChanged, function(input)
             if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
                 local vx = camera.ViewportSize.X
@@ -3901,49 +3836,29 @@ function library:esp_preview(properties)
         end)
     end
 
-    -- ViewportFrame
     local viewport = library:create("ViewportFrame", {
-        Parent = panel_inline;
-        BackgroundColor3 = rgb(14, 14, 16);
-        BackgroundTransparency = 0;
-        BorderSizePixel = 0;
-        Position = dim2(0, 0, 0, 35);
-        Size = dim2(1, 0, 1, -43);      -- fills panel below header with room for bottom padding
-        Name = "\0";
-        Ambient = rgb(255, 255, 255);
-        LightColor = rgb(255, 255, 255);
+        Parent = panel_inline; BackgroundColor3 = rgb(14, 14, 16);
+        BackgroundTransparency = 0; BorderSizePixel = 0;
+        Position = dim2(0, 0, 0, 35); Size = dim2(1, 0, 1, -43); Name = "\0";
+        Ambient = rgb(255, 255, 255); LightColor = rgb(255, 255, 255);
         LightDirection = vec3(-1, -2, -1);
     })
+    library:create("UICorner", { Parent = viewport; CornerRadius = dim(0, 7) })
 
-    library:create("UICorner", {
-        Parent = viewport;
-        CornerRadius = dim(0, 7)
-    })
-
-    -- WorldModel for correct viewport lighting
-    local world_model = library:create("WorldModel", {
-        Parent = viewport;
-    })
-
+    local world_model = library:create("WorldModel", { Parent = viewport })
     character.Parent = world_model
 
     local root = character:FindFirstChild("HumanoidRootPart")
     if root then
         library:create("PointLight", {
-            Parent = root;
-            Brightness = 5;
-            Range = 30;
-            Color = rgb(255, 255, 255);
+            Parent = root; Brightness = 5; Range = 30; Color = rgb(255, 255, 255)
         })
     end
 
     local vp_camera = library:create("Camera", {
-        FieldOfView = 55;
-        CameraType = Enum.CameraType.Custom;
-        Parent = world_model;
-        Name = "\0"
+        FieldOfView = 55; CameraType = Enum.CameraType.Custom;
+        Parent = world_model; Name = "\0"
     })
-
     viewport.CurrentCamera = vp_camera
 
     library:connection(run.RenderStepped, function()
@@ -3954,70 +3869,36 @@ function library:esp_preview(properties)
         vp_camera.CFrame = cfr(Vector3.new(0, 2.5, -5), Vector3.new(0, 1, -12))
     end)
 
-    -- ─── Toggle button injected into the section header ──────────────────────
-    -- This goes into whatever section called esp_preview.
-    -- self.items["button"] is the section header TextButton in Milenium.
+    -- Toggle pill in section header
     local toggle_btn = library:create("TextButton", {
-        FontFace = fonts.small;
-        Text = "";
-        AutoButtonColor = false;
-        AnchorPoint = vec2(1, 0.5);
-        Parent = self.items["button"];
-        Name = "\0";
-        Position = dim2(1, -9, 0.5, 0);
-        Size = dim2(0, 36, 0, 18);
-        BorderSizePixel = 0;
-        TextSize = 14;
-        BackgroundColor3 = rgb(58, 58, 62);
+        FontFace = fonts.small; Text = ""; AutoButtonColor = false;
+        AnchorPoint = vec2(1, 0.5); Parent = self.items["button"]; Name = "\0";
+        Position = dim2(1, -9, 0.5, 0); Size = dim2(0, 36, 0, 18);
+        BorderSizePixel = 0; TextSize = 14; BackgroundColor3 = rgb(58, 58, 62);
         BorderColor3 = rgb(0, 0, 0);
     })
-
-    library:create("UICorner", {
-        Parent = toggle_btn;
-        CornerRadius = dim(0, 999)
-    })
-
+    library:create("UICorner", { Parent = toggle_btn; CornerRadius = dim(0, 999) })
     local toggle_inline = library:create("Frame", {
-        Parent = toggle_btn;
-        Size = dim2(1, -2, 1, -2);
-        Name = "\0";
-        BorderColor3 = rgb(0, 0, 0);
-        Position = dim2(0, 1, 0, 1);
-        BorderSizePixel = 0;
-        BackgroundColor3 = rgb(50, 50, 50)
+        Parent = toggle_btn; Size = dim2(1, -2, 1, -2); Name = "\0";
+        BorderColor3 = rgb(0, 0, 0); Position = dim2(0, 1, 0, 1);
+        BorderSizePixel = 0; BackgroundColor3 = rgb(50, 50, 50)
     })
-
-    library:create("UICorner", {
-        Parent = toggle_inline;
-        CornerRadius = dim(0, 999)
-    })
-
+    library:create("UICorner", { Parent = toggle_inline; CornerRadius = dim(0, 999) })
     library:create("UIGradient", {
         Color = rgbseq{rgbkey(0, rgb(211, 211, 211)), rgbkey(1, rgb(211, 211, 211))};
         Parent = toggle_inline
     })
-
     local toggle_circle = library:create("Frame", {
-        Parent = toggle_inline;
-        Name = "\0";
-        Position = dim2(0, 2, 0, 2);
-        BorderColor3 = rgb(0, 0, 0);
-        Size = dim2(0, 12, 0, 12);
-        BorderSizePixel = 0;
-        BackgroundColor3 = rgb(86, 86, 88)
+        Parent = toggle_inline; Name = "\0"; Position = dim2(0, 2, 0, 2);
+        BorderColor3 = rgb(0, 0, 0); Size = dim2(0, 12, 0, 12);
+        BorderSizePixel = 0; BackgroundColor3 = rgb(86, 86, 88)
     })
-
-    library:create("UICorner", {
-        Parent = toggle_circle;
-        CornerRadius = dim(0, 999)
-    })
+    library:create("UICorner", { Parent = toggle_circle; CornerRadius = dim(0, 999) })
 
     local panel_open = false
-
     local function set_panel(bool)
         panel_open = bool
         panel_sgui.Enabled = bool
-
         library:tween(toggle_btn,    {BackgroundColor3 = bool and themes.preset.accent or rgb(58, 58, 62)}, Enum.EasingStyle.Quad)
         library:tween(toggle_inline, {BackgroundColor3 = bool and themes.preset.accent or rgb(50, 50, 50)}, Enum.EasingStyle.Quad)
         library:tween(toggle_circle, {
@@ -4025,99 +3906,65 @@ function library:esp_preview(properties)
             Position = bool and dim2(1, -14, 0, 2) or dim2(0, 2, 0, 2)
         }, Enum.EasingStyle.Quad)
     end
+    toggle_btn.MouseButton1Click:Connect(function() set_panel(not panel_open) end)
 
-    toggle_btn.MouseButton1Click:Connect(function()
-        set_panel(not panel_open)
-    end)
-
-    -- Also keep section header click from fighting the toggle
-    self.items["button"].MouseButton1Click:Connect(function()
-        -- intentionally left empty — original section open logic still fires
-        -- via the section's own connection set up in library:section()
-    end)
-
-    -- ─── ESP overlay objects ──────────────────────────────────────────────────
+    -- ─── ESP overlay objects ──────────────────────────────────────────────
     local objects = cfg.objects; do
         objects["holder"] = library:create("Frame", {
-            Parent = viewport;
-            Name = "\0";
-            BackgroundTransparency = 1;
-            Position = dim2(0.5, 0, 0.5, 5);
-            BorderColor3 = rgb(0, 0, 0);
-            Size = dim2(0, 90, 0, 140);
-            BorderSizePixel = 0;
-            AnchorPoint = vec2(0.5, 0.5);
-            BackgroundColor3 = rgb(255, 255, 255)
+            Parent = viewport; Name = "\0"; BackgroundTransparency = 1;
+            Position = dim2(0.5, 0, 0.5, 5); BorderColor3 = rgb(0, 0, 0);
+            Size = dim2(0, 90, 0, 140); BorderSizePixel = 0;
+            AnchorPoint = vec2(0.5, 0.5); BackgroundColor3 = rgb(255, 255, 255)
         })
 
-        objects["name"] = library:create("TextLabel", {
-            FontFace = fonts.small;
-            Parent = library["other"];
-            TextColor3 = (flags["Name_Color"] and flags["Name_Color"].Color) or rgb(0, 255, 255);
-            BorderColor3 = rgb(0, 0, 0);
-            Text = string.format("%s (@%s)", lp.DisplayName, lp.Name);
-            Name = "\0";
-            TextStrokeTransparency = 0;
-            AnchorPoint = vec2(0.5, 1);
-            Size = dim2(1, 0, 0, 0);
-            BackgroundTransparency = 1;
-            Position = dim2(0.5, 0, 0, -4);
-            BorderSizePixel = 0;
-            AutomaticSize = Enum.AutomaticSize.Y;
-            TextSize = 11;
-            BackgroundColor3 = rgb(255, 255, 255)
+        -- Box fill
+        objects["box_fill"] = library:create("Frame", {
+            Parent = library["other"]; Name = "\0"; ZIndex = 0;
+            Size = dim2(1, 0, 1, 0); Position = dim2(0, 0, 0, 0);
+            BorderSizePixel = 0; BorderColor3 = rgb(0, 0, 0);
+            BackgroundColor3 = (flags["Box_Fill_Color"] and flags["Box_Fill_Color"].Color) or rgb(255, 255, 255);
+            BackgroundTransparency = (flags["Box_Fill_Color"] and flags["Box_Fill_Color"].Transparency) or 0.85;
         })
 
-        objects["box_handler"] = library:create("Frame", {
-            Parent = library["other"];
-            Name = "\0";
-            BackgroundTransparency = 1;
-            Position = dim2(0, 1, 0, 1);
-            BorderColor3 = rgb(0, 0, 0);
-            Size = dim2(1, -2, 1, -2);
-            BorderSizePixel = 0;
-            BackgroundColor3 = rgb(255, 255, 255)
+        objects["box_fill_gradient"] = library:create("UIGradient", {
+            Parent = library["other"]; Rotation = 90;
+            Color = rgbseq{
+                rgbkey(0, (flags["Box_Fill_Gradient_Top"] and flags["Box_Fill_Gradient_Top"].Color) or rgb(0, 120, 255)),
+                rgbkey(1, (flags["Box_Fill_Gradient_Bot"] and flags["Box_Fill_Gradient_Bot"].Color) or rgb(0, 0, 100)),
+            };
+            Transparency = numseq{numkey(0, 0), numkey(1, 0)};
         })
 
+        -- Normal box
         objects["box_outline"] = library:create("UIStroke", {
-            Parent = library["other"];
-            LineJoinMode = Enum.LineJoinMode.Miter
+            Parent = library["other"]; LineJoinMode = Enum.LineJoinMode.Miter
         })
-
+        objects["box_handler"] = library:create("Frame", {
+            Parent = library["other"]; Name = "\0"; BackgroundTransparency = 1;
+            Position = dim2(0, 1, 0, 1); BorderColor3 = rgb(0, 0, 0);
+            Size = dim2(1, -2, 1, -2); BorderSizePixel = 0;
+            BackgroundColor3 = rgb(255, 255, 255)
+        })
         objects["box_color"] = library:create("UIStroke", {
-            Color = (flags["Box_Color"] and flags["Box_Color"].Color) or rgb(0, 255, 0);
-            LineJoinMode = Enum.LineJoinMode.Miter;
-            Name = "\0";
+            Color = (flags["Box_Color"] and flags["Box_Color"].Color) or rgb(255, 255, 255);
+            LineJoinMode = Enum.LineJoinMode.Miter; Name = "\0";
             Parent = objects["box_handler"]
         })
-
         objects["outline_frame"] = library:create("Frame", {
-            Parent = objects["box_handler"];
-            Name = "\0";
-            BackgroundTransparency = 1;
-            Position = dim2(0, 1, 0, 1);
-            BorderColor3 = rgb(0, 0, 0);
-            Size = dim2(1, -2, 1, -2);
-            BorderSizePixel = 0;
+            Parent = objects["box_handler"]; Name = "\0"; BackgroundTransparency = 1;
+            Position = dim2(0, 1, 0, 1); BorderColor3 = rgb(0, 0, 0);
+            Size = dim2(1, -2, 1, -2); BorderSizePixel = 0;
             BackgroundColor3 = rgb(255, 255, 255)
         })
+        library:create("UIStroke", { Parent = objects["outline_frame"]; LineJoinMode = Enum.LineJoinMode.Miter })
 
-        library:create("UIStroke", {
-            Parent = objects["outline_frame"];
-            LineJoinMode = Enum.LineJoinMode.Miter
-        })
-
+        -- Corner boxes
         objects["corners"] = library:create("Frame", {
-            Parent = library["other"];
-            Name = "\0";
-            BackgroundTransparency = 1;
-            Position = dim2(0, -1, 0, 2);
-            BorderColor3 = rgb(0, 0, 0);
-            Size = dim2(1, 0, 1, 0);
-            BorderSizePixel = 0;
+            Parent = library["other"]; Name = "\0"; BackgroundTransparency = 1;
+            Position = dim2(0, -1, 0, 2); BorderColor3 = rgb(0, 0, 0);
+            Size = dim2(1, 0, 1, 0); BorderSizePixel = 0;
             BackgroundColor3 = rgb(255, 255, 255)
         })
-
         local cornerDefs = {
             {pos = dim2(0,  0,  0, -2), size = dim2(0.35, 0, 0, 3), anchor = vec2(0, 0)},
             {pos = dim2(0,  0,  0,  1), size = dim2(0, 3, 0.25, 0), anchor = vec2(0, 0)},
@@ -4128,81 +3975,89 @@ function library:esp_preview(properties)
             {pos = dim2(1, -1,  1, -2), size = dim2(0.35, 0, 0, 3), anchor = vec2(1, 1)},
             {pos = dim2(1,  0,  1, -4), size = dim2(0, 3, 0.25, 1), anchor = vec2(1, 1), rotation = 180},
         }
-
-        for i, d in cornerDefs do
+        for _, d in cornerDefs do
             local outer = library:create("Frame", {
-                Parent = objects["corners"];
-                Name = "line";
-                Position = d.pos;
-                AnchorPoint = d.anchor;
-                Rotation = d.rotation or 0;
-                BorderColor3 = rgb(0, 0, 0);
-                Size = d.size;
-                BorderSizePixel = 0;
+                Parent = objects["corners"]; Name = "line"; Position = d.pos;
+                AnchorPoint = d.anchor; Rotation = d.rotation or 0;
+                BorderColor3 = rgb(0, 0, 0); Size = d.size; BorderSizePixel = 0;
                 BackgroundColor3 = rgb(0, 0, 0)
             })
             library:create("Frame", {
-                Parent = outer;
-                Position = dim2(0, 1, 0, 1);
-                BorderColor3 = rgb(0, 0, 0);
-                Size = dim2(1, -2, 1, -2);
-                BorderSizePixel = 0;
-                BackgroundColor3 = (flags["Box_Color"] and flags["Box_Color"].Color) or rgb(0, 255, 0)
+                Parent = outer; Position = dim2(0, 1, 0, 1); BorderColor3 = rgb(0, 0, 0);
+                Size = dim2(1, -2, 1, -2); BorderSizePixel = 0;
+                BackgroundColor3 = (flags["Box_Color"] and flags["Box_Color"].Color) or rgb(255, 255, 255)
             })
         end
 
-        objects["healthbar_holder"] = library:create("Frame", {
-            AnchorPoint = vec2(1, 0);
-            Parent = library["other"];
-            Name = "\0";
-            Position = dim2(0, -5, 0, -1);
+        -- Name
+        objects["name"] = library:create("TextLabel", {
+            FontFace = fonts.small; Parent = library["other"];
+            TextColor3 = (flags["Name_Color"] and flags["Name_Color"].Color) or rgb(255, 255, 255);
             BorderColor3 = rgb(0, 0, 0);
-            Size = dim2(0, 4, 1, 2);
-            BorderSizePixel = 0;
-            BackgroundColor3 = rgb(0, 0, 0)
-        })
-
-        objects["healthbar"] = library:create("Frame", {
-            Parent = objects["healthbar_holder"];
-            Name = "\0";
-            Position = dim2(0, 1, 0, 1);
-            BorderColor3 = rgb(0, 0, 0);
-            Size = dim2(1, -2, 1, -2);
-            BorderSizePixel = 0;
-            BackgroundColor3 = rgb(0, 255, 0)
-        })
-
-        objects["distance"] = library:create("TextLabel", {
-            FontFace = fonts.small;
-            TextColor3 = (flags["Distance_Color"] and flags["Distance_Color"].Color) or rgb(0, 255, 0);
-            BorderColor3 = rgb(0, 0, 0);
-            Text = "42st";
-            Parent = library["other"];
-            TextStrokeTransparency = 0;
-            Name = "\0";
-            Size = dim2(1, 0, 0, 0);
-            BackgroundTransparency = 1;
-            Position = dim2(0, 0, 1, 5);
-            BorderSizePixel = 0;
-            AutomaticSize = Enum.AutomaticSize.Y;
-            TextSize = 11;
+            Text = string.format("%s (@%s)", lp.DisplayName, lp.Name);
+            Name = "\0"; TextStrokeTransparency = 0; AnchorPoint = vec2(0.5, 1);
+            Size = dim2(1, 0, 0, 0); BackgroundTransparency = 1;
+            Position = dim2(0.5, 0, 0, -4); BorderSizePixel = 0;
+            AutomaticSize = Enum.AutomaticSize.Y; TextSize = 11;
             BackgroundColor3 = rgb(255, 255, 255)
         })
 
+        -- Healthbar
+        objects["healthbar_holder"] = library:create("Frame", {
+            AnchorPoint = vec2(1, 0); Parent = library["other"]; Name = "\0";
+            Position = dim2(0, -5, 0, -1); BorderColor3 = rgb(0, 0, 0);
+            Size = dim2(0, 4, 1, 2); BorderSizePixel = 0; BackgroundColor3 = rgb(0, 0, 0)
+        })
+        objects["healthbar"] = library:create("Frame", {
+            Parent = objects["healthbar_holder"]; Name = "\0";
+            Position = dim2(0, 1, 0, 1); BorderColor3 = rgb(0, 0, 0);
+            Size = dim2(1, -2, 1, -2); BorderSizePixel = 0; BackgroundColor3 = rgb(0, 255, 0)
+        })
+
+        -- Health text (shown above healthbar bottom-left)
+        objects["health_text"] = library:create("TextLabel", {
+            FontFace = fonts.small; Parent = library["other"];
+            TextColor3 = (flags["Health_Text_Color"] and flags["Health_Text_Color"].Color) or rgb(255, 255, 255);
+            BorderColor3 = rgb(0, 0, 0); Text = "100 HP"; Name = "\0";
+            TextStrokeTransparency = 0; AnchorPoint = vec2(1, 1);
+            Size = dim2(0, 0, 0, 0); BackgroundTransparency = 1;
+            Position = dim2(0, -8, 1, 0); BorderSizePixel = 0;
+            AutomaticSize = Enum.AutomaticSize.XY; TextSize = 11;
+            BackgroundColor3 = rgb(255, 255, 255)
+        })
+
+        -- Distance
+        objects["distance"] = library:create("TextLabel", {
+            FontFace = fonts.small;
+            TextColor3 = (flags["Distance_Color"] and flags["Distance_Color"].Color) or rgb(255, 255, 255);
+            BorderColor3 = rgb(0, 0, 0); Text = "42st"; Parent = library["other"];
+            TextStrokeTransparency = 0; Name = "\0"; Size = dim2(1, 0, 0, 0);
+            BackgroundTransparency = 1; Position = dim2(0, 0, 1, 5); BorderSizePixel = 0;
+            AutomaticSize = Enum.AutomaticSize.Y; TextSize = 11;
+            BackgroundColor3 = rgb(255, 255, 255)
+        })
+
+        -- Weapon
         objects["weapon"] = library:create("TextLabel", {
             FontFace = fonts.small;
-            TextColor3 = (flags["Weapon_Color"] and flags["Weapon_Color"].Color) or rgb(0, 255, 255);
-            BorderColor3 = rgb(0, 0, 0);
-            Text = "[ AK-47 ]";
-            Parent = library["other"];
-            TextStrokeTransparency = 0;
-            Name = "\0";
-            Size = dim2(1, 0, 0, 0);
-            BackgroundTransparency = 1;
-            Position = dim2(0, 0, 1, 18);
-            BorderSizePixel = 0;
-            AutomaticSize = Enum.AutomaticSize.Y;
-            TextSize = 11;
+            TextColor3 = (flags["Weapon_Color"] and flags["Weapon_Color"].Color) or rgb(255, 255, 255);
+            BorderColor3 = rgb(0, 0, 0); Text = "[ AK-47 ]"; Parent = library["other"];
+            TextStrokeTransparency = 0; Name = "\0"; Size = dim2(1, 0, 0, 0);
+            BackgroundTransparency = 1; Position = dim2(0, 0, 1, 18); BorderSizePixel = 0;
+            AutomaticSize = Enum.AutomaticSize.Y; TextSize = 11;
+            BackgroundColor3 = rgb(255, 255, 255)
+        })
+
+        -- Flags label (right side of box)
+        objects["flags_label"] = library:create("TextLabel", {
+            FontFace = fonts.small;
+            TextColor3 = (flags["Flags_Color"] and flags["Flags_Color"].Color) or rgb(255, 255, 255);
+            BorderColor3 = rgb(0, 0, 0); Text = "Armed\nMoving"; Parent = library["other"];
+            TextStrokeTransparency = 0; Name = "\0"; AnchorPoint = vec2(0, 0);
+            Size = dim2(0, 0, 0, 0); BackgroundTransparency = 1;
+            TextXAlignment = Enum.TextXAlignment.Left;
+            Position = dim2(1, 5, 0, 0); BorderSizePixel = 0;
+            AutomaticSize = Enum.AutomaticSize.XY; TextSize = 11;
             BackgroundColor3 = rgb(255, 255, 255)
         })
     end
@@ -4211,30 +4066,35 @@ function library:esp_preview(properties)
     task.spawn(function()
         while viewport and viewport.Parent do
             task.wait()
-            local t = math.abs(math.sin(tick() * 0.8))
+            local t         = math.abs(math.sin(tick() * 0.8))
             local lowColor  = (flags["Health_Low"]  and flags["Health_Low"].Color)  or rgb(255, 0, 0)
             local highColor = (flags["Health_High"] and flags["Health_High"].Color) or rgb(0, 255, 0)
-            objects["healthbar"].Size     = dim2(1, -2, t, -2)
-            objects["healthbar"].Position = dim2(0, 1, 1 - t, 1)
+            objects["healthbar"].Size             = dim2(1, -2, t, -2)
+            objects["healthbar"].Position         = dim2(0, 1, 1 - t, 1)
             objects["healthbar"].BackgroundColor3 = lowColor:Lerp(highColor, t)
+            objects["health_text"].Text           = math.round(t * 100).." HP"
         end
     end)
 
     function cfg.refresh_elements()
-        objects["holder"].Parent = (flags["Enabled"] ~= false) and viewport or library["other"]
+        local cache = library["other"]
 
-        objects["name"].Parent = flags["Names"] and objects["holder"] or library["other"]
+        objects["holder"].Parent = (flags["Enabled"] ~= false) and viewport or cache
+
+        -- Names
+        objects["name"].Parent = flags["Names"] and objects["holder"] or cache
         if flags["Name_Color"] then objects["name"].TextColor3 = flags["Name_Color"].Color end
 
+        -- Boxes
         local isCorner = flags["Box_Type"] == "Corner"
         if flags["Boxes"] then
-            objects["corners"].Parent     = isCorner and objects["holder"] or library["other"]
-            objects["box_handler"].Parent = isCorner and library["other"]  or objects["holder"]
-            objects["box_outline"].Parent = isCorner and library["other"]  or objects["holder"]
+            objects["corners"].Parent     = isCorner and objects["holder"] or cache
+            objects["box_handler"].Parent = isCorner and cache or objects["holder"]
+            objects["box_outline"].Parent = isCorner and cache or objects["holder"]
         else
-            objects["corners"].Parent     = library["other"]
-            objects["box_handler"].Parent = library["other"]
-            objects["box_outline"].Parent = library["other"]
+            objects["corners"].Parent     = cache
+            objects["box_handler"].Parent = cache
+            objects["box_outline"].Parent = cache
         end
 
         if flags["Box_Color"] then
@@ -4247,18 +4107,50 @@ function library:esp_preview(properties)
             end
         end
 
-        objects["healthbar_holder"].Parent = flags["Healthbar"] and objects["holder"] or library["other"]
+        -- Box fill
+        if flags["Box_Fill"] and flags["Boxes"] then
+            objects["box_fill"].Parent = objects["holder"]
+            if flags["Box_Fill_Color"] then
+                objects["box_fill"].BackgroundColor3    = flags["Box_Fill_Color"].Color
+                objects["box_fill"].BackgroundTransparency = flags["Box_Fill_Color"].Transparency or 0.85
+            end
+            if flags["Box_Fill_Gradient"] then
+                objects["box_fill_gradient"].Parent = objects["box_fill"]
+                objects["box_fill_gradient"].Color  = rgbseq{
+                    rgbkey(0, (flags["Box_Fill_Gradient_Top"] and flags["Box_Fill_Gradient_Top"].Color) or rgb(0, 120, 255)),
+                    rgbkey(1, (flags["Box_Fill_Gradient_Bot"] and flags["Box_Fill_Gradient_Bot"].Color) or rgb(0, 0, 100)),
+                }
+            else
+                objects["box_fill_gradient"].Parent = cache
+            end
+        else
+            objects["box_fill"].Parent          = cache
+            objects["box_fill_gradient"].Parent = cache
+        end
 
-        objects["distance"].Parent = flags["Distance"] and objects["holder"] or library["other"]
+        -- Healthbar
+        objects["healthbar_holder"].Parent = flags["Healthbar"] and objects["holder"] or cache
+
+        -- Health text
+        objects["health_text"].Parent = flags["Health_Text"] and objects["healthbar_holder"] or cache
+        if flags["Health_Text_Color"] then
+            objects["health_text"].TextColor3 = flags["Health_Text_Color"].Color
+        end
+
+        -- Distance
+        objects["distance"].Parent = flags["Distance"] and objects["holder"] or cache
         if flags["Distance_Color"] then objects["distance"].TextColor3 = flags["Distance_Color"].Color end
 
-        objects["weapon"].Parent = flags["Weapon"] and objects["holder"] or library["other"]
+        -- Weapon
+        objects["weapon"].Parent = flags["Weapon"] and objects["holder"] or cache
         if flags["Weapon_Color"] then objects["weapon"].TextColor3 = flags["Weapon_Color"].Color end
+
+        -- Flags label
+        objects["flags_label"].Parent = flags["Flags_ESP"] and objects["holder"] or cache
+        if flags["Flags_Color"] then objects["flags_label"].TextColor3 = flags["Flags_Color"].Color end
     end
 
     cfg.refresh_elements()
-
-    -- expose so callers can force show/hide
     cfg.set_visible = set_panel
 
     return setmetatable(cfg, library)
