@@ -628,7 +628,7 @@ function esp.refresh_elements()
             if not data.chams_backup then data.apply_chams() end
             if objects["chams_highlight"] then
                 objects["chams_highlight"].FillColor        = flags["Chams_Color"].Color
-                objects["chams_highlight"].FillTransparency = 0.3
+                objects["chams_highlight"].FillTransparency = 0.6
             end
         else
             if data.chams_backup then data.remove_chams() end
