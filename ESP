@@ -96,7 +96,7 @@ ESP.Flags = {
     NameColor               = Color3.fromRGB(255, 255, 255),
     NameDisplayType         = "DisplayName",
     Tool                    = true,
-    ToolColor               = Color3.fromRGB(220, 220, 220),
+    ToolColor               = Color3.fromRGB(255, 255, 255),
 
     -- Highlight (Roblox instance, applied to enemy players)
     Highlight               = false,
@@ -132,7 +132,7 @@ ESP.LocalFlags = {
     -- Character Material: apply material to the local character body parts
     CharacterMaterial       = false,
     CharacterMaterialType   = "Neon",         -- "ForceField" | "Neon"
-    CharacterMaterialColor  = Color3.fromRGB(220, 255, 0),
+    CharacterMaterialColor  = Color3.fromRGB(255, 255, 255),
     CharacterMaterialTransparency = 0,
 
     -- Local Highlight: Highlight instance on the local character
