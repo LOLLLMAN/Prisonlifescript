@@ -105,12 +105,11 @@ ESP.Flags = {
     HighlightOutlineColor   = Color3.fromRGB(255, 255, 255),
     HighlightOutlineAlpha   = 1,
 
-    -- ── Chams ──────────────────────────────────────────────────────────
-    -- Applied to enemy character parts (material override)
-    Chams                   = false,
-    ChamsColor              = Color3.fromRGB(255, 255, 255),
-    ChamsTransparency       = 0,
-    ChamsMaterial           = "Neon",     -- "Neon" | "ForceField" | "Outline"
+    -- ── Material (drawing-based chams) ─────────────────────────────────
+    -- Projects coloured quads over enemy body parts (shows through walls)
+    Material                = false,
+    MaterialColor           = Color3.fromRGB(255, 255, 255),
+    MaterialTransparency    = 0.25,
 
     -- ── Skeleton ───────────────────────────────────────────────────────
     -- Live bone lines drawn over enemy players
@@ -154,8 +153,8 @@ local localPlayer     = Players.LocalPlayer
 local objects         = {}           -- [player] = drawing table
 local connection      = nil
 
--- chams: store original material/color per part so we can restore
-local chams_cache     = {}           -- [player] = { [part] = {Material, Color, Transparency} }
+-- drawing-based chams quads: [player] = { [part] = { q1..q6 } }
+local chams_quads     = {}
 
 -- skeleton lines per player
 local skeleton_lines  = {}           -- [player] = { line, outline } * N_BONES
@@ -163,10 +162,12 @@ local skeleton_lines  = {}           -- [player] = { line, outline } * N_BONES
 -- ─── Local Player Module ──────────────────────────────────────────────────
 ESP.LocalPlayer = {}
 
-local lp_highlight    = nil          -- Highlight instance on local char
-local lp_skel_lines   = nil          -- skeleton line table for self
-local lp_skel_conn    = nil          -- RenderStepped connection for self skeleton
-local lp_tool_conn    = nil          -- ChildAdded connection for tool changes
+local lp_highlight      = nil    -- Highlight instance on local char
+local lp_skel_lines     = nil    -- skeleton line table for self
+local lp_skel_conn      = nil    -- RenderStepped connection for self skeleton
+local lp_tool_conn      = nil    -- ChildAdded connection for tool changes
+local lp_char_mat_cache = {}     -- [part] = {Material,Color,Transparency} saved before ApplyCharacterMaterial
+local lp_tool_cache     = {}     -- [part] = {Material,Color,Transparency} saved before ApplyMaterialTools
 
 -- ─── Helpers ─────────────────────────────────────────────────────────────
 local function lerpColor(a, b, t)
@@ -280,40 +281,86 @@ local function updateBoneLines(lines, char, color, transparency)
     end
 end
 
--- ─── Chams helpers ────────────────────────────────────────────────────────
-local function applyChams(player)
-    local char = player.Character
-    if not char then return end
-    local cache = {}
-    local col   = ESP.Flags.ChamsColor
-    local trans = ESP.Flags.ChamsTransparency
-    local mat   = Enum.Material[ESP.Flags.ChamsMaterial] or Enum.Material.Neon
-
-    for _, part in ipairs(char:GetDescendants()) do
-        if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
-            cache[part] = { Material=part.Material, Color=part.Color, Transparency=part.Transparency }
-            part.Material     = mat
-            part.Color        = col
-            part.Transparency = trans
-        end
-    end
-    chams_cache[player] = cache
-end
-
-local function removeChams(player)
-    local cache = chams_cache[player]
-    if not cache then return end
-    local char = player.Character
+-- ─── Drawing-based Material chams (quad projection) ───────────────────────
+local function updateChamsForPlayer(player)
+    local char  = player.Character
+    local col   = ESP.Flags.MaterialColor
+    local trans = ESP.Flags.MaterialTransparency
+    if not chams_quads[player] then chams_quads[player] = {} end
+    local pq   = chams_quads[player]
+    local seen = {}
     if char then
-        for part, orig in pairs(cache) do
-            if part and part.Parent then
-                part.Material     = orig.Material
-                part.Color        = orig.Color
-                part.Transparency = orig.Transparency
+        for _, part in ipairs(char:GetChildren()) do
+            if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
+                seen[part] = true
+                if not pq[part] then
+                    pq[part] = {}
+                    for i = 1, 6 do
+                        local q = Drawing.new("Quad")
+                        q.Filled=true; q.Thickness=1; q.ZIndex=0; q.Visible=false
+                        pq[part][i] = q
+                    end
+                end
+                local sp3 = Camera:WorldToViewportPoint(part.Position)
+                if sp3.Z <= 0 then
+                    for _, q in ipairs(pq[part]) do q.Visible=false end
+                    continue
+                end
+                local cf = part.CFrame
+                local hx, hy, hz = part.Size.X/2, part.Size.Y/2, part.Size.Z/2
+                local function vpt(x,y,z)
+                    local s = Camera:WorldToViewportPoint((cf*CFrame.new(x,y,z)).Position)
+                    return Vector2.new(s.X, s.Y)
+                end
+                local T1=vpt(-hx, hy,-hz); local T2=vpt(-hx, hy, hz)
+                local T3=vpt( hx, hy, hz); local T4=vpt( hx, hy,-hz)
+                local B1=vpt(-hx,-hy,-hz); local B2=vpt(-hx,-hy, hz)
+                local B3=vpt( hx,-hy, hz); local B4=vpt( hx,-hy,-hz)
+                local faces = {
+                    {T1,T2,T3,T4}, {B1,B2,B3,B4},
+                    {T1,T2,B2,B1}, {T2,T3,B3,B2},
+                    {T3,T4,B4,B3}, {T4,T1,B1,B4},
+                }
+                for i, f in ipairs(faces) do
+                    local q = pq[part][i]
+                    q.PointA=f[1]; q.PointB=f[2]; q.PointC=f[3]; q.PointD=f[4]
+                    q.Color=col; q.Transparency=trans; q.Visible=true
+                end
             end
         end
     end
-    chams_cache[player] = nil
+    for part, quads in pairs(pq) do
+        if not seen[part] then
+            for _, q in ipairs(quads) do q.Visible=false end
+        end
+    end
+end
+
+local function hideChamsForPlayer(player)
+    local pq = chams_quads[player]
+    if not pq then return end
+    for _, quads in pairs(pq) do
+        for _, q in ipairs(quads) do q.Visible=false end
+    end
+end
+
+local function destroyChamsForPlayer(player)
+    local pq = chams_quads[player]
+    if not pq then return end
+    for _, quads in pairs(pq) do
+        for _, q in ipairs(quads) do q:Remove() end
+    end
+    chams_quads[player] = nil
+end
+
+local function hideExtras(player)
+    hideChamsForPlayer(player)
+    local sl = skeleton_lines[player]
+    if sl then
+        for _, pair in ipairs(sl) do
+            pair.line.Visible=false; pair.outline.Visible=false
+        end
+    end
 end
 
 -- ─── Per-Player Drawing Objects ───────────────────────────────────────────
@@ -327,15 +374,15 @@ local function createObjects(player)
     end
 
     d.fill          = newDrawing("Square", { Visible=false, Filled=true, Color=ESP.Flags.FillColor, Transparency=ESP.Flags.FillTransparency, ZIndex=0 })
-    d.fill_gradient = newGradientImage(GRADIENT_B64.indicator_gradient, { Visible=false, Transparency=0.35, ZIndex=1 })
+    d.fill_gradient = newDrawing("Square", { Visible=false, Filled=true, Transparency=0.75, ZIndex=1 })
 
     d.hp_bg         = newDrawing("Line", { Visible=false, Thickness=4,   Color=Color3.fromRGB(0,0,0), ZIndex=1 })
     d.hp_bar        = newDrawing("Line", { Visible=false, Thickness=2.5, Color=ESP.Flags.HealthBarColor, ZIndex=2 })
-    d.hp_gradient   = newGradientImage(GRADIENT_B64.upward_gradient, { Visible=false, Transparency=0.4, ZIndex=3 })
+    d.hp_gradient   = newDrawing("Square", { Visible=false, Filled=true, Transparency=0.75, ZIndex=3 })
 
     d.armor_bg       = newDrawing("Line", { Visible=false, Thickness=4,   Color=Color3.fromRGB(0,0,0), ZIndex=1 })
     d.armor_bar      = newDrawing("Line", { Visible=false, Thickness=2.5, Color=ESP.Flags.ArmorBarColor, ZIndex=2 })
-    d.armor_gradient = newGradientImage(GRADIENT_B64.upward_gradient, { Visible=false, Transparency=0.4, ZIndex=3 })
+    d.armor_gradient = newDrawing("Square", { Visible=false, Filled=true, Transparency=0.75, ZIndex=3 })
 
     d.hp_text   = newDrawing("Text", { Visible=false, Size=11, Font=Drawing.Fonts.UI, Color=ESP.Flags.HealthTextColor, Outline=true, OutlineColor=Color3.fromRGB(0,0,0), ZIndex=4 })
     d.name_text = newDrawing("Text", { Visible=false, Size=13, Font=Drawing.Fonts.UI, Color=ESP.Flags.NameColor, Outline=true, OutlineColor=Color3.fromRGB(0,0,0), Center=true, ZIndex=4 })
@@ -357,7 +404,7 @@ local function destroyObjects(player)
     if d.highlight then d.highlight:Destroy() end
 
     -- clean up chams + skeleton
-    removeChams(player)
+    destroyChamsForPlayer(player)
     if skeleton_lines[player] then
         removeBoneLines(skeleton_lines[player])
         skeleton_lines[player] = nil
@@ -387,17 +434,19 @@ end
 local function updatePlayer(player, d)
     local flags = ESP.Flags
 
-    if flags.TeamCheck and player.Team == localPlayer.Team then hideAll(d) return end
+    if flags.TeamCheck and player.Team == localPlayer.Team then
+        hideAll(d); hideExtras(player); return
+    end
 
     local char = player.Character
-    if not char then hideAll(d); removeChams(player) return end
-    if not char:FindFirstChild("HumanoidRootPart") then hideAll(d) return end
+    if not char then hideAll(d); hideExtras(player); return end
+    if not char:FindFirstChild("HumanoidRootPart") then hideAll(d); hideExtras(player); return end
 
-    -- ── Chams ────────────────────────────────────────────────────────────
-    if flags.Chams then
-        if not chams_cache[player] then applyChams(player) end
+    -- ── Material (drawing-based chams) ───────────────────────────────────
+    if flags.Material then
+        updateChamsForPlayer(player)
     else
-        if chams_cache[player] then removeChams(player) end
+        hideChamsForPlayer(player)
     end
 
     -- ── Skeleton lines ────────────────────────────────────────────────────
@@ -454,7 +503,7 @@ local function updatePlayer(player, d)
         d.fill.Color=flags.FillColor; d.fill.Transparency=flags.FillTransparency; d.fill.Visible=true
         if flags.FillGradient then
             d.fill_gradient.Position=tl; d.fill_gradient.Size=Vector2.new(width,height)
-            d.fill_gradient.Color=flags.FillColor; d.fill_gradient.Visible=true
+            d.fill_gradient.Color=Color3.fromRGB(255,255,255); d.fill_gradient.Visible=true
         else d.fill_gradient.Visible=false end
     else d.fill.Visible=false; d.fill_gradient.Visible=false end
 
@@ -467,7 +516,7 @@ local function updatePlayer(player, d)
         d.hp_bar.From=Vector2.new(barX,filledY); d.hp_bar.To=Vector2.new(barX,barBot); d.hp_bar.Color=hpCol; d.hp_bar.Visible=true
         if flags.HealthBarGradient then
             d.hp_gradient.Position=Vector2.new(barX-1,filledY); d.hp_gradient.Size=Vector2.new(3,math.max(barBot-filledY,1))
-            d.hp_gradient.Color=hpCol; d.hp_gradient.Visible=true
+            d.hp_gradient.Color=Color3.fromRGB(255,255,255); d.hp_gradient.Visible=true
         else d.hp_gradient.Visible=false end
     else d.hp_bg.Visible=false; d.hp_bar.Visible=false; d.hp_gradient.Visible=false end
 
@@ -480,7 +529,7 @@ local function updatePlayer(player, d)
         d.armor_bar.From=Vector2.new(armorX,filledY); d.armor_bar.To=Vector2.new(armorX,barBot); d.armor_bar.Color=armorCol; d.armor_bar.Visible=true
         if flags.ArmorBarGradient then
             d.armor_gradient.Position=Vector2.new(armorX-1,filledY); d.armor_gradient.Size=Vector2.new(3,math.max(barBot-filledY,1))
-            d.armor_gradient.Color=armorCol; d.armor_gradient.Visible=true
+            d.armor_gradient.Color=Color3.fromRGB(255,255,255); d.armor_gradient.Visible=true
         else d.armor_gradient.Visible=false end
     else d.armor_bg.Visible=false; d.armor_bar.Visible=false; d.armor_gradient.Visible=false end
 
@@ -536,6 +585,12 @@ end
 local function onRenderStep()
     if not ESP.Flags.Enabled then
         for _, d in pairs(objects) do hideAll(d) end
+        for player in pairs(skeleton_lines) do
+            for _, pair in ipairs(skeleton_lines[player]) do
+                pair.line.Visible=false; pair.outline.Visible=false
+            end
+        end
+        for player in pairs(chams_quads) do hideChamsForPlayer(player) end
         return
     end
     for player, d in pairs(objects) do
@@ -562,40 +617,36 @@ function ESP.LocalPlayer:ApplyMaterialTools()
     local col   = f.MaterialToolsColor
     local trans = f.MaterialToolsTransparency
 
+    local function applyPart(part)
+        if not lp_tool_cache[part] then
+            lp_tool_cache[part] = { Material=part.Material, Color=part.Color, Transparency=part.Transparency }
+        end
+        part.Material=mat; part.Color=col; part.Transparency=trans
+    end
+
     local handle = tool:FindFirstChild("Handle")
     if handle then
-        handle.Material     = mat
-        handle.Color        = col
-        handle.Transparency = trans
-        if handle:IsA("MeshPart") then handle.TextureID = "" end
+        applyPart(handle)
+        if handle:IsA("MeshPart") then handle.TextureID="" end
     end
 
     local default = tool:FindFirstChild("Default")
     if default then
-        default.Material     = mat
-        default.Color        = col
-        default.Transparency = trans
-        default.TextureID    = ""
+        applyPart(default)
+        if default:IsA("MeshPart") then default.TextureID="" end
         for _, part in ipairs(default:GetChildren()) do
-            if part:IsA("BasePart") then
-                part.Material     = mat
-                part.Color        = col
-                part.Transparency = trans
-            end
+            if part:IsA("BasePart") then applyPart(part) end
         end
     end
 end
 
 function ESP.LocalPlayer:RemoveMaterialTools()
-    -- Revert to Plastic/default — store originals if you need exact restore
-    local char = localPlayer.Character
-    if not char then return end
-    local tool = char:FindFirstChildOfClass("Tool")
-    if not tool then return end
-    local handle = tool:FindFirstChild("Handle")
-    if handle then
-        handle.Material = Enum.Material.Plastic
+    for part, orig in pairs(lp_tool_cache) do
+        if part and part.Parent then
+            part.Material=orig.Material; part.Color=orig.Color; part.Transparency=orig.Transparency
+        end
     end
+    lp_tool_cache = {}
 end
 
 -- Hook tool equip so material auto-applies when you switch tools
@@ -633,9 +684,10 @@ function ESP.LocalPlayer:ApplyCharacterMaterial()
 
     for _, part in ipairs(char:GetDescendants()) do
         if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
-            part.Material     = mat
-            part.Color        = col
-            part.Transparency = trans
+            if not lp_char_mat_cache[part] then
+                lp_char_mat_cache[part] = { Material=part.Material, Color=part.Color, Transparency=part.Transparency }
+            end
+            part.Material=mat; part.Color=col; part.Transparency=trans
         end
     end
 
@@ -653,17 +705,17 @@ function ESP.LocalPlayer:ApplyCharacterMaterial()
 end
 
 function ESP.LocalPlayer:RemoveCharacterMaterial()
-    local char = localPlayer.Character
-    if not char then return end
-    local hum  = char:FindFirstChildOfClass("Humanoid")
-    if not hum then return end
-
-    for _, part in ipairs(char:GetDescendants()) do
-        if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
-            part.Material     = Enum.Material.Plastic
-            part.Transparency = 0
+    -- Restore original material/color/transparency for every cached part
+    for part, orig in pairs(lp_char_mat_cache) do
+        if part and part.Parent then
+            part.Material=orig.Material; part.Color=orig.Color; part.Transparency=orig.Transparency
         end
     end
+    lp_char_mat_cache = {}
+
+    local char = localPlayer.Character
+    local hum  = char and char:FindFirstChildOfClass("Humanoid")
+    if not hum then return end
 
     -- Restore clothing
     for _, name in ipairs({"Shirt", "Pants", "Shirt Graphic"}) do
