@@ -804,5 +804,7 @@ function ESP:Refresh()
     end
 end
 
-ESP.Images = GRADIENT_B64
+ESP.Images          = GRADIENT_B64
+ESP.objects         = objects        -- exposed so external scripts can read per-player drawing tables
+ESP.skeleton_lines  = skeleton_lines -- exposed so external scripts can read per-player bone lines
 return ESP
