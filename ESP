@@ -1,27 +1,61 @@
 --[[
-    ╔═══════════════════════════════════════╗
-    ║         PLAYER ESP LIBRARY            ║
-    ║     Standalone · Fully Featured       ║
-    ╚═══════════════════════════════════════╝
+    ╔══════════════════════════════════════════════╗
+    ║           PLAYER ESP LIBRARY                 ║
+    ║  Box · Fill · Health · Name · Tool           ║
+    ║  Gradient Images · Highlight                 ║
+    ║  Chams · Material · Skeleton                 ║
+    ║  Local Player: Material Tools · Highlight    ║
+    ╚══════════════════════════════════════════════╝
 
     USAGE:
-        local ESP = loadstring(...)() -- or require / dofile
+        local ESP = loadstring(...)()
         ESP:Enable()
         ESP:Disable()
-        ESP.Flags.Box = true
-        ESP.Flags.Fill = true
-        -- etc.
+
+    LOCAL PLAYER API:
+        ESP.LocalPlayer:ApplyMaterialTools()
+        ESP.LocalPlayer:RemoveMaterialTools()
+        ESP.LocalPlayer:ApplyCharacterMaterial()
+        ESP.LocalPlayer:RemoveCharacterMaterial()
+        ESP.LocalPlayer:SetHighlight(true/false)
+        ESP.LocalPlayer:DrawSkeleton()   -- live skeleton on self
+        ESP.LocalPlayer:ClearSkeleton()
 ]]
 
 local ESP = {}
 ESP.__index = ESP
 
--- ─── Services ──────────────────────────────────────────────────────────────
-local Players        = game:GetService("Players")
-local RunService     = game:GetService("RunService")
-local Camera         = workspace.CurrentCamera
+-- ─── Services ─────────────────────────────────────────────────────────────
+local Players    = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local Camera     = workspace.CurrentCamera
 
--- ─── Default Flags ─────────────────────────────────────────────────────────
+-- ─── Gradient base64 (juju image table) ──────────────────────────────────
+local GRADIENT_B64 = {
+    indicator_gradient = "iVBORw0KGgoAAAANSUhEUgAAAGkAAAAhCAYAAADaiYU7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACySURBVGhD7dFBCsMwDABBtbSP8v8P+Yu/kBwahRqMiO9Z2AEjozinffXeY9u2T0R8zzNmqrs6V+/S6p8x6264e1vnfE/z9+o4z/6fadxzzvfVHOr+7u0802pX96t31661dryvlR7NSABGAjASgJEAjARgJAAjARgJwEgARgIwEoCRAIwEYCQAIwEYCcBIAEYCMBKAkQCMBGAkACMBGAnASABGAjASgJEAjARgJAAjPV7ED23xMgBp5elFAAAAAElFTkSuQmCC",
+    upward_gradient    = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAEACAQAAADYN9QTAAAAdElEQVQoz5VSQQ7AIAgr3b/2/1+xE8xZGFtiTG0QbSn8JCwWApBwgsGgwesVLbOqPsmNsXhRe1pzLDH+F7Ni/MO7qfRoPmDihhqSPufuz0qbptCpSH5jdIKMiXAS8hKAsk8ZiXFAnXUqIS3yReyapTJXN7gAfRcL/BkMYYIAAAAASUVORK5CYII=",
+}
+
+-- ─── Skeleton bone connections (R15) ──────────────────────────────────────
+-- Each entry = { from_part, to_part }
+local BONES = {
+    { "UpperTorso",   "LowerTorso"    },  -- spine
+    { "UpperTorso",   "Head"          },  -- neck
+    { "UpperTorso",   "LeftUpperArm"  },  -- left shoulder
+    { "UpperTorso",   "RightUpperArm" },  -- right shoulder
+    { "LeftUpperArm", "LeftLowerArm"  },  -- left elbow
+    { "LeftLowerArm", "LeftHand"      },  -- left wrist
+    { "RightUpperArm","RightLowerArm" },  -- right elbow
+    { "RightLowerArm","RightHand"     },  -- right wrist
+    { "LowerTorso",   "LeftUpperLeg"  },  -- left hip
+    { "LeftUpperLeg", "LeftLowerLeg"  },  -- left knee
+    { "LeftLowerLeg", "LeftFoot"      },  -- left ankle
+    { "LowerTorso",   "RightUpperLeg" },  -- right hip
+    { "RightUpperLeg","RightLowerLeg" },  -- right knee
+    { "RightLowerLeg","RightFoot"     },  -- right ankle
+}
+
+-- ─── Default Flags ────────────────────────────────────────────────────────
 ESP.Flags = {
     -- Master
     Enabled                 = true,
@@ -30,9 +64,7 @@ ESP.Flags = {
     Box                     = true,
     BoxOutline              = true,
     BoxColor                = Color3.fromRGB(255, 255, 255),
-    BoxTransparency         = 1,
     BoxOutlineColor         = Color3.fromRGB(0, 0, 0),
-    BoxOutlineTransparency  = 1,
 
     -- Fill
     Fill                    = false,
@@ -45,9 +77,10 @@ ESP.Flags = {
     HealthBarGradient       = false,
     DynamicHealthColor      = true,
     HealthBarColor          = Color3.fromRGB(0, 255, 0),
-    HealthBarTransparency   = 1,
 
     -- Armor Bar
+    ArmorBar                = true,
+    ArmorBarGradient        = false,
     DynamicArmorColor       = true,
     ArmorBarColor           = Color3.fromRGB(100, 180, 255),
 
@@ -55,491 +88,648 @@ ESP.Flags = {
     HealthText              = true,
     DynamicHealthTextColor  = true,
     HealthTextColor         = Color3.fromRGB(255, 255, 255),
-    HealthTextTransparency  = 1,
     MinimumHealthVisibility = 95,
     FollowHealthBar         = true,
 
-    -- Name
+    -- Name / Tool
     Name                    = true,
     NameColor               = Color3.fromRGB(255, 255, 255),
-    NameTransparency        = 1,
-
-    -- Tool
+    NameDisplayType         = "DisplayName",
     Tool                    = true,
     ToolColor               = Color3.fromRGB(220, 220, 220),
-    ToolTransparency        = 1,
 
-    -- Highlight (Roblox Highlight instance)
+    -- Highlight (Roblox instance, applied to enemy players)
     Highlight               = false,
     HighlightFillColor      = Color3.fromRGB(255, 255, 255),
     HighlightFillAlpha      = 0.3,
     HighlightOutlineColor   = Color3.fromRGB(255, 255, 255),
     HighlightOutlineAlpha   = 1,
 
-    -- Misc
-    NameDisplayType         = "DisplayName", -- "Username" | "DisplayName"
-    TeamCheck               = false,         -- skip teammates
+    -- ── Chams ──────────────────────────────────────────────────────────
+    -- Applied to enemy character parts (material override)
+    Chams                   = false,
+    ChamsColor              = Color3.fromRGB(255, 255, 255),
+    ChamsTransparency       = 0,
+    ChamsMaterial           = "Neon",     -- "Neon" | "ForceField" | "Outline"
+
+    -- ── Skeleton ───────────────────────────────────────────────────────
+    -- Live bone lines drawn over enemy players
+    Skeleton                = false,
+    SkeletonColor           = Color3.fromRGB(255, 255, 255),
+    SkeletonTransparency    = 1,          -- 0 = fully visible
+
+    -- ── Misc ───────────────────────────────────────────────────────────
+    TeamCheck               = false,
 }
 
--- ─── Internal State ─────────────────────────────────────────────────────────
-local localPlayer   = Players.LocalPlayer
-local objects       = {}   -- [player] = { drawings, highlight }
-local connection    = nil
-local drawing_avail = typeof(Drawing) == "table" or pcall(function() Drawing.new("Line") end)
+-- ─── Local Player Flags ───────────────────────────────────────────────────
+ESP.LocalFlags = {
+    -- Material Tools: apply a material/color to the equipped tool handle
+    MaterialTools           = false,
+    MaterialToolsMaterial   = "ForceField",   -- "ForceField" | "Neon"
+    MaterialToolsColor      = Color3.fromRGB(255, 255, 255),
+    MaterialToolsTransparency = 0,
 
--- ─── Helpers ─────────────────────────────────────────────────────────────────
+    -- Character Material: apply material to the local character body parts
+    CharacterMaterial       = false,
+    CharacterMaterialType   = "Neon",         -- "ForceField" | "Neon"
+    CharacterMaterialColor  = Color3.fromRGB(220, 255, 0),
+    CharacterMaterialTransparency = 0,
+
+    -- Local Highlight: Highlight instance on the local character
+    Highlight               = false,
+    HighlightFillColor      = Color3.fromRGB(255, 255, 255),
+    HighlightFillAlpha      = 0.3,
+    HighlightOutlineColor   = Color3.fromRGB(255, 255, 255),
+    HighlightOutlineAlpha   = 1,
+
+    -- Local Skeleton: live bone lines drawn on self
+    Skeleton                = false,
+    SkeletonColor           = Color3.fromRGB(255, 255, 255),
+    SkeletonTransparency    = 1,
+}
+
+-- ─── Internal State ───────────────────────────────────────────────────────
+local localPlayer     = Players.LocalPlayer
+local objects         = {}           -- [player] = drawing table
+local connection      = nil
+
+-- chams: store original material/color per part so we can restore
+local chams_cache     = {}           -- [player] = { [part] = {Material, Color, Transparency} }
+
+-- skeleton lines per player
+local skeleton_lines  = {}           -- [player] = { line, outline } * N_BONES
+
+-- ─── Local Player Module ──────────────────────────────────────────────────
+ESP.LocalPlayer = {}
+
+local lp_highlight    = nil          -- Highlight instance on local char
+local lp_skel_lines   = nil          -- skeleton line table for self
+local lp_skel_conn    = nil          -- RenderStepped connection for self skeleton
+local lp_tool_conn    = nil          -- ChildAdded connection for tool changes
+
+-- ─── Helpers ─────────────────────────────────────────────────────────────
 local function lerpColor(a, b, t)
-    return Color3.new(
-        a.R + (b.R - a.R) * t,
-        a.G + (b.G - a.G) * t,
-        a.B + (b.B - a.B) * t
-    )
+    return Color3.new(a.R+(b.R-a.R)*t, a.G+(b.G-a.G)*t, a.B+(b.B-a.B)*t)
 end
 
 local function healthColor(pct)
-    -- red (0%) → yellow (50%) → green (100%)
-    if pct >= 0.5 then
-        return lerpColor(Color3.fromRGB(255,255,0), Color3.fromRGB(0,255,0), (pct-0.5)*2)
-    else
-        return lerpColor(Color3.fromRGB(255,0,0), Color3.fromRGB(255,255,0), pct*2)
-    end
+    if pct >= 0.5 then return lerpColor(Color3.fromRGB(255,255,0), Color3.fromRGB(0,255,0), (pct-0.5)*2)
+    else return lerpColor(Color3.fromRGB(255,0,0), Color3.fromRGB(255,255,0), pct*2) end
 end
 
-local function armorColor(pct)
+local function armorColorLerp(pct)
     return lerpColor(Color3.fromRGB(80,80,200), Color3.fromRGB(100,180,255), pct)
 end
 
 local function newDrawing(kind, props)
     local d = Drawing.new(kind)
-    for k,v in pairs(props or {}) do d[k] = v end
+    for k,v in pairs(props or {}) do d[k]=v end
     return d
+end
+
+local function newGradientImage(b64, props)
+    local img = Drawing.new("Image")
+    img.Data = b64
+    for k,v in pairs(props or {}) do img[k]=v end
+    return img
+end
+
+local function worldToScreen(pos)
+    local sp, on = Camera:WorldToViewportPoint(pos)
+    return Vector2.new(sp.X, sp.Y), on
 end
 
 local function getCharacterBounds(char)
     local hrp = char:FindFirstChild("HumanoidRootPart")
     if not hrp then return nil end
-
-    local min, max = hrp.Position, hrp.Position
-    for _, part in ipairs(char:GetDescendants()) do
-        if part:IsA("BasePart") and not part.Name:find("Handle") then
-            local pos = part.Position
-            local size = part.Size
-            min = Vector3.new(
-                math.min(min.X, pos.X - size.X/2),
-                math.min(min.Y, pos.Y - size.Y/2),
-                math.min(min.Z, pos.Z - size.Z/2)
-            )
-            max = Vector3.new(
-                math.max(max.X, pos.X + size.X/2),
-                math.max(max.Y, pos.Y + size.Y/2),
-                math.max(max.Z, pos.Z + size.Z/2)
-            )
+    local mn, mx = hrp.Position, hrp.Position
+    for _, p in ipairs(char:GetDescendants()) do
+        if p:IsA("BasePart") then
+            local pos, s = p.Position, p.Size
+            mn = Vector3.new(math.min(mn.X,pos.X-s.X/2),math.min(mn.Y,pos.Y-s.Y/2),math.min(mn.Z,pos.Z-s.Z/2))
+            mx = Vector3.new(math.max(mx.X,pos.X+s.X/2),math.max(mx.Y,pos.Y+s.Y/2),math.max(mx.Z,pos.Z+s.Z/2))
         end
     end
-    return min, max
-end
-
-local function worldToScreen(pos)
-    local screenPos, onScreen = Camera:WorldToViewportPoint(pos)
-    return Vector2.new(screenPos.X, screenPos.Y), onScreen, screenPos.Z
+    return mn, mx
 end
 
 local function getHumanoidData(char)
     local hum = char:FindFirstChildOfClass("Humanoid")
-    if not hum then return 100, 100, 0, 0 end
-    local maxHp  = hum.MaxHealth
-    local hp     = math.clamp(hum.Health, 0, maxHp)
-    -- Armor: try common value objects
-    local armorVal = char:FindFirstChild("Armor") or
-                     (char:FindFirstChild("BodyEffects") and char.BodyEffects:FindFirstChild("Armor"))
-    local armor    = armorVal and armorVal.Value or 0
-    local maxArmor = 100
-    return hp, maxHp, armor, maxArmor
+    if not hum then return 100,100,0,100 end
+    local maxHp = hum.MaxHealth
+    local hp = math.clamp(hum.Health, 0, maxHp)
+    local av = char:FindFirstChild("Armor")
+        or (char:FindFirstChild("BodyEffects") and char.BodyEffects:FindFirstChild("Armor"))
+    return hp, maxHp, av and av.Value or 0, 100
 end
 
 local function getCurrentTool(plr)
-    local char = plr.Character
-    if not char then return nil end
-    local tool = char:FindFirstChildOfClass("Tool")
-    return tool and tool.Name or nil
+    local c = plr.Character
+    if not c then return nil end
+    local t = c:FindFirstChildOfClass("Tool")
+    return t and t.Name or nil
 end
 
--- ─── Per-Player Object Creation ──────────────────────────────────────────────
+-- ─── Skeleton line-pair factory ───────────────────────────────────────────
+local function makeBoneLines(color, transparency)
+    local lines = {}
+    for i = 1, #BONES do
+        lines[i] = {
+            line = newDrawing("Line", {
+                Visible=false, Thickness=1, Color=color,
+                Transparency=transparency, ZIndex=2 }),
+            outline = newDrawing("Line", {
+                Visible=false, Thickness=3, Color=Color3.fromRGB(0,0,0),
+                Transparency=transparency, ZIndex=1 }),
+        }
+    end
+    return lines
+end
+
+local function removeBoneLines(lines)
+    if not lines then return end
+    for _, pair in ipairs(lines) do
+        pair.line:Remove()
+        pair.outline:Remove()
+    end
+end
+
+local function updateBoneLines(lines, char, color, transparency)
+    for i, bone in ipairs(BONES) do
+        local pA = char:FindFirstChild(bone[1])
+        local pB = char:FindFirstChild(bone[2])
+        local pair = lines[i]
+        if pA and pB then
+            local sA, onA = worldToScreen(pA.Position)
+            local sB, onB = worldToScreen(pB.Position)
+            if onA or onB then
+                pair.line.From    = sA; pair.line.To    = sB
+                pair.outline.From = sA; pair.outline.To = sB
+                pair.line.Color   = color
+                pair.line.Transparency    = transparency
+                pair.outline.Transparency = transparency
+                pair.line.Visible    = true
+                pair.outline.Visible = true
+            else
+                pair.line.Visible = false; pair.outline.Visible = false
+            end
+        else
+            pair.line.Visible = false; pair.outline.Visible = false
+        end
+    end
+end
+
+-- ─── Chams helpers ────────────────────────────────────────────────────────
+local function applyChams(player)
+    local char = player.Character
+    if not char then return end
+    local cache = {}
+    local col   = ESP.Flags.ChamsColor
+    local trans = ESP.Flags.ChamsTransparency
+    local mat   = Enum.Material[ESP.Flags.ChamsMaterial] or Enum.Material.Neon
+
+    for _, part in ipairs(char:GetDescendants()) do
+        if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
+            cache[part] = { Material=part.Material, Color=part.Color, Transparency=part.Transparency }
+            part.Material     = mat
+            part.Color        = col
+            part.Transparency = trans
+        end
+    end
+    chams_cache[player] = cache
+end
+
+local function removeChams(player)
+    local cache = chams_cache[player]
+    if not cache then return end
+    local char = player.Character
+    if char then
+        for part, orig in pairs(cache) do
+            if part and part.Parent then
+                part.Material     = orig.Material
+                part.Color        = orig.Color
+                part.Transparency = orig.Transparency
+            end
+        end
+    end
+    chams_cache[player] = nil
+end
+
+-- ─── Per-Player Drawing Objects ───────────────────────────────────────────
 local function createObjects(player)
     local d = {}
 
-    -- Box (4 lines + 4 outline lines)
-    d.box_lines    = {}
-    d.box_outlines = {}
+    d.box_lines = {}; d.box_outlines = {}
     for i = 1,4 do
-        d.box_lines[i] = newDrawing("Line", {
-            Visible   = false,
-            Thickness = 1.5,
-            Color     = ESP.Flags.BoxColor,
-            ZIndex    = 2,
-        })
-        d.box_outlines[i] = newDrawing("Line", {
-            Visible   = false,
-            Thickness = 3.5,
-            Color     = ESP.Flags.BoxOutlineColor,
-            ZIndex    = 1,
-        })
+        d.box_lines[i]    = newDrawing("Line", { Visible=false, Thickness=1.5, Color=ESP.Flags.BoxColor, ZIndex=2 })
+        d.box_outlines[i] = newDrawing("Line", { Visible=false, Thickness=3.5, Color=ESP.Flags.BoxOutlineColor, ZIndex=1 })
     end
 
-    -- Fill quad
-    d.fill = newDrawing("Square", {
-        Visible     = false,
-        Filled      = true,
-        Color       = ESP.Flags.FillColor,
-        Transparency= ESP.Flags.FillTransparency,
-        ZIndex      = 0,
-    })
+    d.fill          = newDrawing("Square", { Visible=false, Filled=true, Color=ESP.Flags.FillColor, Transparency=ESP.Flags.FillTransparency, ZIndex=0 })
+    d.fill_gradient = newGradientImage(GRADIENT_B64.indicator_gradient, { Visible=false, Transparency=0.35, ZIndex=1 })
 
-    -- Health Bar + background
-    d.hp_bg  = newDrawing("Line", { Visible=false, Thickness=4, Color=Color3.fromRGB(0,0,0), ZIndex=1 })
-    d.hp_bar = newDrawing("Line", { Visible=false, Thickness=2.5, Color=ESP.Flags.HealthBarColor, ZIndex=2 })
+    d.hp_bg         = newDrawing("Line", { Visible=false, Thickness=4,   Color=Color3.fromRGB(0,0,0), ZIndex=1 })
+    d.hp_bar        = newDrawing("Line", { Visible=false, Thickness=2.5, Color=ESP.Flags.HealthBarColor, ZIndex=2 })
+    d.hp_gradient   = newGradientImage(GRADIENT_B64.upward_gradient, { Visible=false, Transparency=0.4, ZIndex=3 })
 
-    -- Armor Bar
-    d.armor_bg  = newDrawing("Line", { Visible=false, Thickness=4, Color=Color3.fromRGB(0,0,0), ZIndex=1 })
-    d.armor_bar = newDrawing("Line", { Visible=false, Thickness=2.5, Color=ESP.Flags.ArmorBarColor, ZIndex=2 })
+    d.armor_bg       = newDrawing("Line", { Visible=false, Thickness=4,   Color=Color3.fromRGB(0,0,0), ZIndex=1 })
+    d.armor_bar      = newDrawing("Line", { Visible=false, Thickness=2.5, Color=ESP.Flags.ArmorBarColor, ZIndex=2 })
+    d.armor_gradient = newGradientImage(GRADIENT_B64.upward_gradient, { Visible=false, Transparency=0.4, ZIndex=3 })
 
-    -- Health Text
-    d.hp_text = newDrawing("Text", {
-        Visible    = false,
-        Size       = 11,
-        Font       = Drawing.Fonts.UI,
-        Color      = ESP.Flags.HealthTextColor,
-        Outline    = true,
-        OutlineColor = Color3.fromRGB(0,0,0),
-        ZIndex     = 3,
-    })
+    d.hp_text   = newDrawing("Text", { Visible=false, Size=11, Font=Drawing.Fonts.UI, Color=ESP.Flags.HealthTextColor, Outline=true, OutlineColor=Color3.fromRGB(0,0,0), ZIndex=4 })
+    d.name_text = newDrawing("Text", { Visible=false, Size=13, Font=Drawing.Fonts.UI, Color=ESP.Flags.NameColor, Outline=true, OutlineColor=Color3.fromRGB(0,0,0), Center=true, ZIndex=4 })
+    d.tool_text = newDrawing("Text", { Visible=false, Size=11, Font=Drawing.Fonts.UI, Color=ESP.Flags.ToolColor, Outline=true, OutlineColor=Color3.fromRGB(0,0,0), Center=true, ZIndex=4 })
 
-    -- Name Text
-    d.name_text = newDrawing("Text", {
-        Visible    = false,
-        Size       = 13,
-        Font       = Drawing.Fonts.UI,
-        Color      = ESP.Flags.NameColor,
-        Outline    = true,
-        OutlineColor = Color3.fromRGB(0,0,0),
-        Center     = true,
-        ZIndex     = 3,
-    })
-
-    -- Tool Text
-    d.tool_text = newDrawing("Text", {
-        Visible    = false,
-        Size       = 11,
-        Font       = Drawing.Fonts.UI,
-        Color      = ESP.Flags.ToolColor,
-        Outline    = true,
-        OutlineColor = Color3.fromRGB(0,0,0),
-        Center     = true,
-        ZIndex     = 3,
-    })
-
-    -- Roblox Highlight
     d.highlight = nil
-
     objects[player] = d
 end
 
 local function destroyObjects(player)
     local d = objects[player]
     if not d then return end
+    for _, l in ipairs(d.box_lines)    do l:Remove() end
+    for _, l in ipairs(d.box_outlines) do l:Remove() end
+    d.fill:Remove(); d.fill_gradient:Remove()
+    d.hp_bg:Remove(); d.hp_bar:Remove(); d.hp_gradient:Remove()
+    d.armor_bg:Remove(); d.armor_bar:Remove(); d.armor_gradient:Remove()
+    d.hp_text:Remove(); d.name_text:Remove(); d.tool_text:Remove()
+    if d.highlight then d.highlight:Destroy() end
 
-    for _, line in ipairs(d.box_lines)    do line:Remove() end
-    for _, line in ipairs(d.box_outlines) do line:Remove() end
-    d.fill:Remove()
-    d.hp_bg:Remove()
-    d.hp_bar:Remove()
-    d.armor_bg:Remove()
-    d.armor_bar:Remove()
-    d.hp_text:Remove()
-    d.name_text:Remove()
-    d.tool_text:Remove()
-
-    if d.highlight then
-        d.highlight:Destroy()
+    -- clean up chams + skeleton
+    removeChams(player)
+    if skeleton_lines[player] then
+        removeBoneLines(skeleton_lines[player])
+        skeleton_lines[player] = nil
     end
 
     objects[player] = nil
 end
 
--- ─── Hide all drawings for a player ─────────────────────────────────────────
 local function hideAll(d)
-    for _, l in ipairs(d.box_lines)    do l.Visible = false end
-    for _, l in ipairs(d.box_outlines) do l.Visible = false end
-    d.fill.Visible      = false
-    d.hp_bg.Visible     = false
-    d.hp_bar.Visible    = false
-    d.armor_bg.Visible  = false
-    d.armor_bar.Visible = false
-    d.hp_text.Visible   = false
-    d.name_text.Visible = false
-    d.tool_text.Visible = false
+    for _, l in ipairs(d.box_lines)    do l.Visible=false end
+    for _, l in ipairs(d.box_outlines) do l.Visible=false end
+    d.fill.Visible=false; d.fill_gradient.Visible=false
+    d.hp_bg.Visible=false; d.hp_bar.Visible=false; d.hp_gradient.Visible=false
+    d.armor_bg.Visible=false; d.armor_bar.Visible=false; d.armor_gradient.Visible=false
+    d.hp_text.Visible=false; d.name_text.Visible=false; d.tool_text.Visible=false
 end
 
--- ─── Draw a box from 4 corner points ─────────────────────────────────────────
-local function drawBox(lines, outlines, tl, tr, br, bl, color, outlineColor, showOutline)
-    local corners = {tl, tr, br, bl}
-    local nexts   = {tr, br, bl, tl}
-
-    for i = 1, 4 do
-        local line = lines[i]
-        local outline = outlines[i]
-        line.From    = corners[i]
-        line.To      = nexts[i]
-        line.Color   = color
-        line.Visible = true
-
-        outline.From    = corners[i]
-        outline.To      = nexts[i]
-        outline.Color   = outlineColor
-        outline.Visible = showOutline
+local function drawBox(lines, outlines, tl, tr, br, bl, col, ocol, showOutline)
+    local corners = {tl,tr,br,bl}; local nexts = {tr,br,bl,tl}
+    for i=1,4 do
+        lines[i].From=corners[i]; lines[i].To=nexts[i]; lines[i].Color=col; lines[i].Visible=true
+        outlines[i].From=corners[i]; outlines[i].To=nexts[i]; outlines[i].Color=ocol; outlines[i].Visible=showOutline
     end
 end
 
--- ─── Update a single player ───────────────────────────────────────────────────
+-- ─── Main Per-Player Update ───────────────────────────────────────────────
 local function updatePlayer(player, d)
     local flags = ESP.Flags
 
-    -- Team check
-    if flags.TeamCheck and player.Team == localPlayer.Team then
-        hideAll(d)
-        return
-    end
+    if flags.TeamCheck and player.Team == localPlayer.Team then hideAll(d) return end
 
     local char = player.Character
-    if not char then hideAll(d) return end
-    local hrp = char:FindFirstChild("HumanoidRootPart")
-    if not hrp then hideAll(d) return end
+    if not char then hideAll(d); removeChams(player) return end
+    if not char:FindFirstChild("HumanoidRootPart") then hideAll(d) return end
 
-    -- Get 3D bounding box
+    -- ── Chams ────────────────────────────────────────────────────────────
+    if flags.Chams then
+        if not chams_cache[player] then applyChams(player) end
+    else
+        if chams_cache[player] then removeChams(player) end
+    end
+
+    -- ── Skeleton lines ────────────────────────────────────────────────────
+    if flags.Skeleton then
+        if not skeleton_lines[player] then
+            skeleton_lines[player] = makeBoneLines(flags.SkeletonColor, 1 - flags.SkeletonTransparency)
+        end
+        updateBoneLines(skeleton_lines[player], char, flags.SkeletonColor, 1 - flags.SkeletonTransparency)
+    else
+        if skeleton_lines[player] then
+            removeBoneLines(skeleton_lines[player])
+            skeleton_lines[player] = nil
+        end
+    end
+
+    -- ── 2D bounding box ───────────────────────────────────────────────────
     local bMin, bMax = getCharacterBounds(char)
     if not bMin then hideAll(d) return end
 
-    -- Project 8 corners to screen
     local corners3D = {
-        Vector3.new(bMin.X, bMin.Y, bMin.Z),
-        Vector3.new(bMax.X, bMin.Y, bMin.Z),
-        Vector3.new(bMin.X, bMax.Y, bMin.Z),
-        Vector3.new(bMax.X, bMax.Y, bMin.Z),
-        Vector3.new(bMin.X, bMin.Y, bMax.Z),
-        Vector3.new(bMax.X, bMin.Y, bMax.Z),
-        Vector3.new(bMin.X, bMax.Y, bMax.Z),
-        Vector3.new(bMax.X, bMax.Y, bMax.Z),
+        Vector3.new(bMin.X,bMin.Y,bMin.Z), Vector3.new(bMax.X,bMin.Y,bMin.Z),
+        Vector3.new(bMin.X,bMax.Y,bMin.Z), Vector3.new(bMax.X,bMax.Y,bMin.Z),
+        Vector3.new(bMin.X,bMin.Y,bMax.Z), Vector3.new(bMax.X,bMin.Y,bMax.Z),
+        Vector3.new(bMin.X,bMax.Y,bMax.Z), Vector3.new(bMax.X,bMax.Y,bMax.Z),
     }
-
-    local minX, minY, maxX, maxY = math.huge, math.huge, -math.huge, -math.huge
-    local allOnScreen = false
-
+    local minX,minY,maxX,maxY = math.huge,math.huge,-math.huge,-math.huge
+    local anyOn = false
     for _, c in ipairs(corners3D) do
-        local sp, onScreen = worldToScreen(c)
-        if onScreen then allOnScreen = true end
-        minX = math.min(minX, sp.X)
-        minY = math.min(minY, sp.Y)
-        maxX = math.max(maxX, sp.X)
-        maxY = math.max(maxY, sp.Y)
+        local sp, on = worldToScreen(c)
+        if on then anyOn=true end
+        minX=math.min(minX,sp.X); minY=math.min(minY,sp.Y)
+        maxX=math.max(maxX,sp.X); maxY=math.max(maxY,sp.Y)
     end
-
-    -- Off-screen culling
     local vp = Camera.ViewportSize
-    if not allOnScreen or maxX < 0 or minX > vp.X or maxY < 0 or minY > vp.Y then
-        hideAll(d)
-        return
-    end
+    if not anyOn or maxX<0 or minX>vp.X or maxY<0 or minY>vp.Y then hideAll(d) return end
 
     local width  = maxX - minX
     local height = maxY - minY
+    local tl=Vector2.new(minX,minY); local tr=Vector2.new(maxX,minY)
+    local br=Vector2.new(maxX,maxY); local bl=Vector2.new(minX,maxY)
 
-    local tl = Vector2.new(minX, minY)
-    local tr = Vector2.new(maxX, minY)
-    local br = Vector2.new(maxX, maxY)
-    local bl = Vector2.new(minX, maxY)
-
-    -- Health / Armor data
     local hp, maxHp, armor, maxArmor = getHumanoidData(char)
-    local hpPct    = maxHp > 0 and (hp / maxHp) or 0
-    local armorPct = maxArmor > 0 and (armor / maxArmor) or 0
+    local hpPct    = maxHp    > 0 and hp    / maxHp    or 0
+    local armorPct = maxArmor > 0 and armor / maxArmor or 0
 
-    -- ── Box ──────────────────────────────────────────────────────────────────
-    local boxColor     = flags.BoxColor
-    local outlineColor = flags.BoxOutlineColor
-    drawBox(d.box_lines, d.box_outlines, tl, tr, br, bl,
-        Color3.new(boxColor.R, boxColor.G, boxColor.B),
-        Color3.new(outlineColor.R, outlineColor.G, outlineColor.B),
-        flags.Box and flags.BoxOutline
-    )
+    -- Box
+    drawBox(d.box_lines, d.box_outlines, tl, tr, br, bl, flags.BoxColor, flags.BoxOutlineColor, flags.Box and flags.BoxOutline)
     for _, l in ipairs(d.box_lines)    do l.Visible = flags.Box end
     for _, l in ipairs(d.box_outlines) do l.Visible = flags.Box and flags.BoxOutline end
 
-    -- ── Fill ─────────────────────────────────────────────────────────────────
+    -- Fill + gradient
     if flags.Fill then
-        d.fill.Position     = tl
-        d.fill.Size         = Vector2.new(width, height)
-        d.fill.Color        = flags.FillColor
-        d.fill.Transparency = flags.FillTransparency
-        d.fill.Visible      = true
-    else
-        d.fill.Visible = false
-    end
+        d.fill.Position=tl; d.fill.Size=Vector2.new(width,height)
+        d.fill.Color=flags.FillColor; d.fill.Transparency=flags.FillTransparency; d.fill.Visible=true
+        if flags.FillGradient then
+            d.fill_gradient.Position=tl; d.fill_gradient.Size=Vector2.new(width,height)
+            d.fill_gradient.Color=flags.FillColor; d.fill_gradient.Visible=true
+        else d.fill_gradient.Visible=false end
+    else d.fill.Visible=false; d.fill_gradient.Visible=false end
 
-    -- ── Health Bar ───────────────────────────────────────────────────────────
-    local barX   = minX - 6
-    local barTop = minY
-    local barBot = maxY
-
+    -- Health bar + gradient
+    local barX=minX-6; local barTop=minY; local barBot=maxY
     if flags.HealthBar then
-        local hpColor = flags.DynamicHealthColor and healthColor(hpPct) or flags.HealthBarColor
+        local hpCol = flags.DynamicHealthColor and healthColor(hpPct) or flags.HealthBarColor
+        local filledY = barBot - height*hpPct
+        d.hp_bg.From=Vector2.new(barX,barTop); d.hp_bg.To=Vector2.new(barX,barBot); d.hp_bg.Color=Color3.fromRGB(0,0,0); d.hp_bg.Visible=true
+        d.hp_bar.From=Vector2.new(barX,filledY); d.hp_bar.To=Vector2.new(barX,barBot); d.hp_bar.Color=hpCol; d.hp_bar.Visible=true
+        if flags.HealthBarGradient then
+            d.hp_gradient.Position=Vector2.new(barX-1,filledY); d.hp_gradient.Size=Vector2.new(3,math.max(barBot-filledY,1))
+            d.hp_gradient.Color=hpCol; d.hp_gradient.Visible=true
+        else d.hp_gradient.Visible=false end
+    else d.hp_bg.Visible=false; d.hp_bar.Visible=false; d.hp_gradient.Visible=false end
 
-        d.hp_bg.From    = Vector2.new(barX, barTop)
-        d.hp_bg.To      = Vector2.new(barX, barBot)
-        d.hp_bg.Color   = Color3.fromRGB(0,0,0)
-        d.hp_bg.Visible = true
+    -- Armor bar + gradient
+    local armorX = barX-5
+    if flags.ArmorBar and armor>0 then
+        local armorCol = flags.DynamicArmorColor and armorColorLerp(armorPct) or flags.ArmorBarColor
+        local filledY  = barBot - height*armorPct
+        d.armor_bg.From=Vector2.new(armorX,barTop); d.armor_bg.To=Vector2.new(armorX,barBot); d.armor_bg.Color=Color3.fromRGB(0,0,0); d.armor_bg.Visible=true
+        d.armor_bar.From=Vector2.new(armorX,filledY); d.armor_bar.To=Vector2.new(armorX,barBot); d.armor_bar.Color=armorCol; d.armor_bar.Visible=true
+        if flags.ArmorBarGradient then
+            d.armor_gradient.Position=Vector2.new(armorX-1,filledY); d.armor_gradient.Size=Vector2.new(3,math.max(barBot-filledY,1))
+            d.armor_gradient.Color=armorCol; d.armor_gradient.Visible=true
+        else d.armor_gradient.Visible=false end
+    else d.armor_bg.Visible=false; d.armor_bar.Visible=false; d.armor_gradient.Visible=false end
 
-        local filledY = barBot - (height * hpPct)
-        d.hp_bar.From    = Vector2.new(barX, filledY)
-        d.hp_bar.To      = Vector2.new(barX, barBot)
-        d.hp_bar.Color   = hpColor
-        d.hp_bar.Visible = true
-    else
-        d.hp_bg.Visible  = false
-        d.hp_bar.Visible = false
-    end
-
-    -- ── Armor Bar (just to the left of HP bar) ────────────────────────────────
-    local armorX = barX - 5
-    if armor > 0 then
-        local armorColor_ = flags.DynamicArmorColor and armorColor(armorPct) or flags.ArmorBarColor
-
-        d.armor_bg.From    = Vector2.new(armorX, barTop)
-        d.armor_bg.To      = Vector2.new(armorX, barBot)
-        d.armor_bg.Color   = Color3.fromRGB(0,0,0)
-        d.armor_bg.Visible = true
-
-        local filledY = barBot - (height * armorPct)
-        d.armor_bar.From    = Vector2.new(armorX, filledY)
-        d.armor_bar.To      = Vector2.new(armorX, barBot)
-        d.armor_bar.Color   = armorColor_
-        d.armor_bar.Visible = true
-    else
-        d.armor_bg.Visible  = false
-        d.armor_bar.Visible = false
-    end
-
-    -- ── Health Text ───────────────────────────────────────────────────────────
+    -- Health text
     local showHpText = flags.HealthText and (hp < flags.MinimumHealthVisibility or flags.MinimumHealthVisibility >= maxHp)
     if showHpText then
-        local hpTxtColor = flags.DynamicHealthTextColor and healthColor(hpPct) or flags.HealthTextColor
-        local hpTxtPos
-        if flags.FollowHealthBar then
-            local filledY = barBot - (height * hpPct)
-            hpTxtPos = Vector2.new(barX - 3, filledY - 6)
-        else
-            hpTxtPos = Vector2.new(barX - 3, minY + height/2 - 6)
-        end
-        d.hp_text.Text     = tostring(math.floor(hp))
-        d.hp_text.Position = hpTxtPos
-        d.hp_text.Color    = hpTxtColor
-        d.hp_text.Visible  = true
-    else
-        d.hp_text.Visible = false
-    end
+        local hpTxtCol = flags.DynamicHealthTextColor and healthColor(hpPct) or flags.HealthTextColor
+        local filledY  = barBot - height*hpPct
+        local pos = flags.FollowHealthBar and Vector2.new(barX-3, filledY-6) or Vector2.new(barX-3, minY+height/2-6)
+        d.hp_text.Text=tostring(math.floor(hp)); d.hp_text.Position=pos; d.hp_text.Color=hpTxtCol; d.hp_text.Visible=true
+    else d.hp_text.Visible=false end
 
-    -- ── Name ─────────────────────────────────────────────────────────────────
+    -- Name
     if flags.Name then
-        local displayName = flags.NameDisplayType == "DisplayName"
-            and player.DisplayName
-            or  player.Name
-        d.name_text.Text     = displayName
-        d.name_text.Position = Vector2.new((minX + maxX)/2, minY - 16)
-        d.name_text.Color    = flags.NameColor
-        d.name_text.Visible  = true
-    else
-        d.name_text.Visible = false
-    end
+        local dn = flags.NameDisplayType=="DisplayName" and player.DisplayName or player.Name
+        d.name_text.Text=dn; d.name_text.Position=Vector2.new((minX+maxX)/2, minY-16); d.name_text.Color=flags.NameColor; d.name_text.Visible=true
+    else d.name_text.Visible=false end
 
-    -- ── Tool / Weapon ─────────────────────────────────────────────────────────
+    -- Tool
     if flags.Tool then
-        local toolName = getCurrentTool(player)
-        if toolName then
-            d.tool_text.Text     = toolName
-            d.tool_text.Position = Vector2.new((minX + maxX)/2, maxY + 2)
-            d.tool_text.Color    = flags.ToolColor
-            d.tool_text.Visible  = true
-        else
-            d.tool_text.Visible = false
-        end
-    else
-        d.tool_text.Visible = false
-    end
+        local tn = getCurrentTool(player)
+        if tn then d.tool_text.Text=tn; d.tool_text.Position=Vector2.new((minX+maxX)/2, maxY+2); d.tool_text.Color=flags.ToolColor; d.tool_text.Visible=true
+        else d.tool_text.Visible=false end
+    else d.tool_text.Visible=false end
 
-    -- ── Highlight ─────────────────────────────────────────────────────────────
+    -- Highlight
     if flags.Highlight then
         if not d.highlight then
             local hl = Instance.new("Highlight")
-            hl.FillColor          = flags.HighlightFillColor
-            hl.FillTransparency   = 1 - flags.HighlightFillAlpha
-            hl.OutlineColor       = flags.HighlightOutlineColor
-            hl.OutlineTransparency= 1 - flags.HighlightOutlineAlpha
-            hl.Adornee            = char
-            hl.Parent             = game:GetService("CoreGui")
-            d.highlight = hl
+            hl.FillColor=flags.HighlightFillColor; hl.FillTransparency=1-flags.HighlightFillAlpha
+            hl.OutlineColor=flags.HighlightOutlineColor; hl.OutlineTransparency=1-flags.HighlightOutlineAlpha
+            hl.Adornee=char; pcall(function() hl.Parent=game:GetService("CoreGui") end)
+            d.highlight=hl
         else
-            d.highlight.FillColor          = flags.HighlightFillColor
-            d.highlight.FillTransparency   = 1 - flags.HighlightFillAlpha
-            d.highlight.OutlineColor       = flags.HighlightOutlineColor
-            d.highlight.OutlineTransparency= 1 - flags.HighlightOutlineAlpha
-            d.highlight.Adornee            = char
-            d.highlight.Enabled            = true
+            d.highlight.FillColor=flags.HighlightFillColor; d.highlight.FillTransparency=1-flags.HighlightFillAlpha
+            d.highlight.OutlineColor=flags.HighlightOutlineColor; d.highlight.OutlineTransparency=1-flags.HighlightOutlineAlpha
+            d.highlight.Adornee=char; d.highlight.Enabled=true
         end
     else
-        if d.highlight then
-            d.highlight.Enabled = false
-        end
+        if d.highlight then d.highlight.Enabled=false end
     end
 end
 
--- ─── Player Added/Removed ────────────────────────────────────────────────────
-local function onPlayerAdded(player)
-    if player == localPlayer then return end
-    createObjects(player)
+-- ─── Player Events ────────────────────────────────────────────────────────
+local function onPlayerAdded(p)
+    if p ~= localPlayer then createObjects(p) end
+end
+local function onPlayerRemoving(p)
+    destroyObjects(p)
 end
 
-local function onPlayerRemoving(player)
-    destroyObjects(player)
-end
-
--- ─── Main Loop ───────────────────────────────────────────────────────────────
+-- ─── Render Loop ──────────────────────────────────────────────────────────
 local function onRenderStep()
     if not ESP.Flags.Enabled then
         for _, d in pairs(objects) do hideAll(d) end
         return
     end
-
     for player, d in pairs(objects) do
-        local ok, err = pcall(updatePlayer, player, d)
-        if not ok then
-            hideAll(d)
+        local ok = pcall(updatePlayer, player, d)
+        if not ok then hideAll(d) end
+    end
+end
+
+-- ═══════════════════════════════════════════════════════════════════════════
+--  LOCAL PLAYER MODULE
+-- ═══════════════════════════════════════════════════════════════════════════
+
+-- ─── Material Tools ───────────────────────────────────────────────────────
+-- Applies material/color to the Handle (and Default child) of the local
+-- player's currently equipped tool.  Mirrors juju's onToolAdded logic.
+function ESP.LocalPlayer:ApplyMaterialTools()
+    local f    = ESP.LocalFlags
+    local char = localPlayer.Character
+    if not char then return end
+    local tool = char:FindFirstChildOfClass("Tool")
+    if not tool then return end
+
+    local mat   = Enum.Material[f.MaterialToolsMaterial] or Enum.Material.ForceField
+    local col   = f.MaterialToolsColor
+    local trans = f.MaterialToolsTransparency
+
+    local handle = tool:FindFirstChild("Handle")
+    if handle then
+        handle.Material     = mat
+        handle.Color        = col
+        handle.Transparency = trans
+        if handle:IsA("MeshPart") then handle.TextureID = "" end
+    end
+
+    local default = tool:FindFirstChild("Default")
+    if default then
+        default.Material     = mat
+        default.Color        = col
+        default.Transparency = trans
+        default.TextureID    = ""
+        for _, part in ipairs(default:GetChildren()) do
+            if part:IsA("BasePart") then
+                part.Material     = mat
+                part.Color        = col
+                part.Transparency = trans
+            end
         end
     end
 end
 
--- ─── Public API ──────────────────────────────────────────────────────────────
-function ESP:Enable()
-    self.Flags.Enabled = true
+function ESP.LocalPlayer:RemoveMaterialTools()
+    -- Revert to Plastic/default — store originals if you need exact restore
+    local char = localPlayer.Character
+    if not char then return end
+    local tool = char:FindFirstChildOfClass("Tool")
+    if not tool then return end
+    local handle = tool:FindFirstChild("Handle")
+    if handle then
+        handle.Material = Enum.Material.Plastic
+    end
+end
 
-    -- Existing players
-    for _, p in ipairs(Players:GetPlayers()) do
-        if p ~= localPlayer and not objects[p] then
-            createObjects(p)
+-- Hook tool equip so material auto-applies when you switch tools
+function ESP.LocalPlayer:StartMaterialToolsAuto()
+    if lp_tool_conn then lp_tool_conn:Disconnect() end
+    lp_tool_conn = localPlayer.CharacterAdded:Connect(function(char)
+        char.ChildAdded:Connect(function(child)
+            if child:IsA("Tool") then
+                task.wait()
+                if ESP.LocalFlags.MaterialTools then
+                    self:ApplyMaterialTools()
+                end
+            end
+        end)
+    end)
+end
+
+function ESP.LocalPlayer:StopMaterialToolsAuto()
+    if lp_tool_conn then lp_tool_conn:Disconnect(); lp_tool_conn=nil end
+end
+
+-- ─── Character Material (body_material) ──────────────────────────────────
+-- Applies material/color to all BaseParts of the local character body,
+-- hides shirt/pants/head decal.  Mirrors juju's updateBodyMaterial.
+function ESP.LocalPlayer:ApplyCharacterMaterial()
+    local f    = ESP.LocalFlags
+    local char = localPlayer.Character
+    if not char then return end
+    local hum  = char:FindFirstChildOfClass("Humanoid")
+    if not hum then return end
+
+    local mat   = Enum.Material[f.CharacterMaterialType] or Enum.Material.Neon
+    local col   = f.CharacterMaterialColor
+    local trans = f.CharacterMaterialTransparency
+
+    for _, part in ipairs(char:GetDescendants()) do
+        if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
+            part.Material     = mat
+            part.Color        = col
+            part.Transparency = trans
         end
     end
 
+    -- Hide clothing by re-parenting to humanoid (juju pattern)
+    for _, name in ipairs({"Shirt", "Pants", "Shirt Graphic"}) do
+        local item = char:FindFirstChild(name)
+        if item then item.Parent = hum end
+    end
+
+    local head = char:FindFirstChild("Head")
+    if head then
+        local decal = head:FindFirstChildOfClass("Decal")
+        if decal then decal.Parent = hum end
+    end
+end
+
+function ESP.LocalPlayer:RemoveCharacterMaterial()
+    local char = localPlayer.Character
+    if not char then return end
+    local hum  = char:FindFirstChildOfClass("Humanoid")
+    if not hum then return end
+
+    for _, part in ipairs(char:GetDescendants()) do
+        if part:IsA("BasePart") and part.Name ~= "HumanoidRootPart" then
+            part.Material     = Enum.Material.Plastic
+            part.Transparency = 0
+        end
+    end
+
+    -- Restore clothing
+    for _, name in ipairs({"Shirt", "Pants", "Shirt Graphic"}) do
+        local item = hum:FindFirstChild(name)
+        if item then item.Parent = char end
+    end
+
+    local decal = hum:FindFirstChildOfClass("Decal")
+    if decal then
+        local head = char:FindFirstChild("Head")
+        if head then decal.Parent = head end
+    end
+end
+
+-- ─── Local Player Highlight ───────────────────────────────────────────────
+function ESP.LocalPlayer:SetHighlight(enabled)
+    local f    = ESP.LocalFlags
+    local char = localPlayer.Character
+    if not char then return end
+
+    if enabled then
+        if not lp_highlight then
+            lp_highlight = Instance.new("Highlight")
+            pcall(function() lp_highlight.Parent = game:GetService("CoreGui") end)
+        end
+        lp_highlight.FillColor           = f.HighlightFillColor
+        lp_highlight.FillTransparency    = 1 - f.HighlightFillAlpha
+        lp_highlight.OutlineColor        = f.HighlightOutlineColor
+        lp_highlight.OutlineTransparency = 1 - f.HighlightOutlineAlpha
+        lp_highlight.Adornee             = char
+        lp_highlight.Enabled             = true
+    else
+        if lp_highlight then
+            lp_highlight.Enabled = false
+        end
+    end
+end
+
+-- ─── Local Player Skeleton ────────────────────────────────────────────────
+-- Draws live bone lines over the local character (self).
+function ESP.LocalPlayer:DrawSkeleton()
+    self:ClearSkeleton()
+    local f = ESP.LocalFlags
+
+    lp_skel_lines = makeBoneLines(f.SkeletonColor, 1 - f.SkeletonTransparency)
+
+    lp_skel_conn = RunService.RenderStepped:Connect(function()
+        local char = localPlayer.Character
+        if not char then return end
+        updateBoneLines(lp_skel_lines, char, f.SkeletonColor, 1 - f.SkeletonTransparency)
+    end)
+end
+
+function ESP.LocalPlayer:ClearSkeleton()
+    if lp_skel_conn then lp_skel_conn:Disconnect(); lp_skel_conn=nil end
+    if lp_skel_lines then removeBoneLines(lp_skel_lines); lp_skel_lines=nil end
+end
+
+-- ─── Public ESP API ───────────────────────────────────────────────────────
+function ESP:Enable()
+    self.Flags.Enabled = true
+    for _, p in ipairs(Players:GetPlayers()) do
+        if p ~= localPlayer and not objects[p] then createObjects(p) end
+    end
     Players.PlayerAdded:Connect(onPlayerAdded)
     Players.PlayerRemoving:Connect(onPlayerRemoving)
-
     if not connection then
         connection = RunService.RenderStepped:Connect(onRenderStep)
     end
@@ -547,28 +737,20 @@ end
 
 function ESP:Disable()
     self.Flags.Enabled = false
-
-    if connection then
-        connection:Disconnect()
-        connection = nil
-    end
-
-    for player, _ in pairs(objects) do
-        destroyObjects(player)
-    end
+    if connection then connection:Disconnect(); connection=nil end
+    for player in pairs(objects) do destroyObjects(player) end
+    -- clean up local player extras
+    ESP.LocalPlayer:SetHighlight(false)
+    ESP.LocalPlayer:ClearSkeleton()
+    ESP.LocalPlayer:StopMaterialToolsAuto()
 end
 
 function ESP:Refresh()
-    -- Rebuilds all player objects (call after changing flags like Highlight)
-    for player, _ in pairs(objects) do
-        destroyObjects(player)
-    end
+    for player in pairs(objects) do destroyObjects(player) end
     for _, p in ipairs(Players:GetPlayers()) do
-        if p ~= localPlayer then
-            createObjects(p)
-        end
+        if p ~= localPlayer then createObjects(p) end
     end
 end
 
--- ─── Return library ──────────────────────────────────────────────────────────
+ESP.Images = GRADIENT_B64
 return ESP
