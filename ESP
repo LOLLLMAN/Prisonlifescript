@@ -119,6 +119,11 @@ ESP.Flags = {
 
     -- ── Misc ───────────────────────────────────────────────────────────
     TeamCheck               = false,
+
+    -- ── Target lock ───────────────────────────────────────────────────
+    -- Set TargetPlayer to a Player instance to override its ESP colour.
+    TargetPlayer            = nil,
+    TargetColor             = Color3.fromRGB(255, 50, 50),
 }
 
 -- ─── Local Player Flags ───────────────────────────────────────────────────
@@ -402,6 +407,7 @@ local function destroyObjects(player)
     d.armor_bg:Remove(); d.armor_bar:Remove(); d.armor_gradient:Remove()
     d.hp_text:Remove(); d.name_text:Remove(); d.tool_text:Remove()
     if d.highlight then d.highlight:Destroy() end
+    if d.target_hl then d.target_hl:Destroy() end
 
     -- clean up chams + skeleton
     destroyChamsForPlayer(player)
@@ -454,7 +460,8 @@ local function updatePlayer(player, d)
         if not skeleton_lines[player] then
             skeleton_lines[player] = makeBoneLines(flags.SkeletonColor, 1 - flags.SkeletonTransparency)
         end
-        updateBoneLines(skeleton_lines[player], char, flags.SkeletonColor, 1 - flags.SkeletonTransparency)
+        local sCol = isTarget and tCol or flags.SkeletonColor
+        updateBoneLines(skeleton_lines[player], char, sCol, 1 - flags.SkeletonTransparency)
     else
         if skeleton_lines[player] then
             removeBoneLines(skeleton_lines[player])
@@ -492,15 +499,36 @@ local function updatePlayer(player, d)
     local hpPct    = maxHp    > 0 and hp    / maxHp    or 0
     local armorPct = maxArmor > 0 and armor / maxArmor or 0
 
+    -- ── Target colour override ────────────────────────────────────────
+    local isTarget = flags.TargetPlayer == player
+    local tCol     = flags.TargetColor
+
+    -- Target lock Highlight (shows through walls, no toggle needed)
+    if isTarget then
+        if not d.target_hl then
+            d.target_hl = Instance.new("Highlight")
+            pcall(function() d.target_hl.Parent = game:GetService("CoreGui") end)
+        end
+        d.target_hl.FillColor           = tCol
+        d.target_hl.FillTransparency    = 0.6
+        d.target_hl.OutlineColor        = tCol
+        d.target_hl.OutlineTransparency = 0
+        d.target_hl.Adornee             = char
+        d.target_hl.Enabled             = true
+    else
+        if d.target_hl then d.target_hl.Enabled = false end
+    end
+
     -- Box
-    drawBox(d.box_lines, d.box_outlines, tl, tr, br, bl, flags.BoxColor, flags.BoxOutlineColor, flags.Box and flags.BoxOutline)
+    local bCol = isTarget and tCol or flags.BoxColor
+    drawBox(d.box_lines, d.box_outlines, tl, tr, br, bl, bCol, flags.BoxOutlineColor, flags.Box and flags.BoxOutline)
     for _, l in ipairs(d.box_lines)    do l.Visible = flags.Box end
     for _, l in ipairs(d.box_outlines) do l.Visible = flags.Box and flags.BoxOutline end
 
     -- Fill + gradient
     if flags.Fill then
         d.fill.Position=tl; d.fill.Size=Vector2.new(width,height)
-        d.fill.Color=flags.FillColor; d.fill.Transparency=flags.FillTransparency; d.fill.Visible=true
+        d.fill.Color = isTarget and tCol or flags.FillColor; d.fill.Transparency=flags.FillTransparency; d.fill.Visible=true
         if flags.FillGradient then
             d.fill_gradient.Position=tl; d.fill_gradient.Size=Vector2.new(width,height)
             d.fill_gradient.Color=Color3.fromRGB(255,255,255); d.fill_gradient.Visible=true
