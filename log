@@ -1,0 +1,3296 @@
+=== GAME SCANNER REPORT ===
+PlaceId  : 136801880565837
+GameId   : 8795154789
+Captured : 2026-04-02 03:49:42
+
+=== SCAN LOG ===
+[INFO] PlaceId       : 136801880565837
+[INFO] GameId        : 8795154789
+[INFO] PlaceVersion  : 670
+[INFO] Game Name     : [FPS] Flick
+[INFO] ──── Remote Scan ────────────────────────────────
+[REMOTE_EVENT] ReplicatedStorage.SoundModule.Sound_RequestFromServer_C2S
+[REMOTE_EVENT] ReplicatedStorage.SoundModule.Sound_PlayOnClient_S2C
+[BINDABLE] ReplicatedStorage.SignalManager.SignalEvents.SwapWeapon [BindableEvent]
+[BINDABLE] ReplicatedStorage.SignalManager.SignalEvents.AimStateChanged [BindableEvent]
+[BINDABLE] ReplicatedStorage.SignalManager.SignalEvents.Spawned [BindableEvent]
+[BINDABLE] ReplicatedStorage.SignalManager.SignalEvents.PlayerInLobby [BindableEvent]
+[BINDABLE] ReplicatedStorage.SignalManager.SignalEvents.PlayerInPlay [BindableEvent]
+[BINDABLE] ReplicatedStorage.SignalManager.SignalEvents.MoblieLayoutPos [BindableEvent]
+[BINDABLE] ReplicatedStorage.SignalManager.SignalEvents.FireWeapon [BindableEvent]
+[BINDABLE] ReplicatedStorage.SignalManager.SignalEvents.FireWeaponMoblie [BindableEvent]
+[BINDABLE] ReplicatedStorage.SignalManager.SignalEvents.ReloadWeapon [BindableEvent]
+[BINDABLE] ReplicatedStorage.SignalManager.SignalEvents.AimWeapon [BindableEvent]
+[BINDABLE] ReplicatedStorage.SignalManager.SignalEvents.InspectWeapon [BindableEvent]
+[REMOTE_EVENT] ReplicatedStorage.ModuleScripts.GunModules.Remote.GunShot
+[REMOTE_EVENT] ReplicatedStorage.ModuleScripts.GunModules.Remote.ConnectM6D
+[REMOTE_EVENT] ReplicatedStorage.ModuleScripts.GunModules.Remote.ProjectileFinished
+[REMOTE_EVENT] ReplicatedStorage.ModuleScripts.GunModules.Remote.ProjectileRender
+[REMOTE_EVENT] ReplicatedStorage.Animation.CrossBow.Remotes.CheckShot
+[REMOTE_EVENT] ReplicatedStorage.Animation.CrossBow.Remotes.Reload
+[REMOTE_EVENT] ReplicatedStorage.Animation.CrossBow.Remotes.S
+[REMOTE_EVENT] ReplicatedStorage.Animation.SS.Remotes.S
+[REMOTE_EVENT] ReplicatedStorage.Animation.SS.Remotes.Reload
+[REMOTE_EVENT] ReplicatedStorage.Animation.SS.Remotes.CheckShot
+[REMOTE_EVENT] ReplicatedStorage.Remotes.ViewDailyStore
+[REMOTE_EVENT] ReplicatedStorage.Remotes.RequestCrateView
+[REMOTE_EVENT] ReplicatedStorage.Remotes.RollCrate
+[REMOTE_EVENT] ReplicatedStorage.Remotes.EquipItem
+[REMOTE_EVENT] ReplicatedStorage.Remotes.UpdateSetting
+[REMOTE_EVENT] ReplicatedStorage.Remotes.UpdateClientData
+[REMOTE_EVENT] ReplicatedStorage.Remotes.SyncInitialData
+[REMOTE_EVENT] ReplicatedStorage.Remotes.ConfirmedElim
+[REMOTE_FUNC] ReplicatedStorage.Remotes.GetLeaderboardData
+[REMOTE_EVENT] ReplicatedStorage.Remotes.StartSpectating
+[REMOTE_EVENT] ReplicatedStorage.Remotes.UpdateLeaderboard
+[REMOTE_EVENT] ReplicatedStorage.Remotes.UpdateRoundInfo
+[REMOTE_EVENT] ReplicatedStorage.Remotes.Command
+[REMOTE_FUNC] ReplicatedStorage.Remotes.ClaimChallengeReward
+[REMOTE_FUNC] ReplicatedStorage.Remotes.PurchaseStoreItem
+[REMOTE_EVENT] ReplicatedStorage.Remotes.RollCrateWithGems
+[BINDABLE] ReplicatedStorage.Remotes.RequestOpenCurrencyStore [BindableEvent]
+[REMOTE_EVENT] ReplicatedStorage.Remotes.UpdateQuestData
+[REMOTE_EVENT] ReplicatedStorage.Remotes.SubmitMapVote
+[REMOTE_EVENT] ReplicatedStorage.Remotes.UpdateVoteCounts
+[REMOTE_EVENT] ReplicatedStorage.Remotes.RewardedAdEvent
+[REMOTE_EVENT] ReplicatedStorage.Remotes.ReportPlayer
+[REMOTE_FUNC] ReplicatedStorage.Remotes.GetCrateData
+[REMOTE_FUNC] ReplicatedStorage.Remotes.GetAdCooldown
+[REMOTE_FUNC] ReplicatedStorage.Remotes.PurchaseLimitedItem
+[REMOTE_EVENT] ReplicatedStorage.Remotes.PromptGemPurchase
+[REMOTE_EVENT] ReplicatedStorage.Remotes.InitiateGift
+[REMOTE_FUNC] ReplicatedStorage.Remotes.GetBundleData
+[REMOTE_EVENT] ReplicatedStorage.Remotes.PurchaseBundle
+[REMOTE_EVENT] ReplicatedStorage.Remotes.RegisterDailyPurchaseIntent
+[REMOTE_FUNC] ReplicatedStorage.Remotes.GetChallengeData
+[REMOTE_EVENT] ReplicatedStorage.Remotes.ClaimQuestReward
+[REMOTE_FUNC] ReplicatedStorage.Remotes.GetQuestData
+[REMOTE_EVENT] ReplicatedStorage.Remotes.g
+[REMOTE_EVENT] ReplicatedStorage.Remotes.UpdateTimeRewardUI
+[REMOTE_EVENT] ReplicatedStorage.Remotes.ClaimTimeReward
+[REMOTE_EVENT] ReplicatedStorage.Remotes.ClaimGroupReward
+[REMOTE_EVENT] ReplicatedStorage.Remotes.Death
+[REMOTE_EVENT] ReplicatedStorage.Remotes.ClientReady
+[REMOTE_EVENT] ReplicatedStorage.Remotes.RequestCurrencyStore
+[REMOTE_FUNC] ReplicatedStorage.Remotes.CheckPaidItemPolicy
+[REMOTE_EVENT] ReplicatedStorage.Remotes.qw
+[REMOTE_EVENT] ReplicatedStorage.EquipPrimaryWeapon
+[REMOTE_EVENT] ReplicatedStorage.15e4a240-12a4-40ba-96f4-accb3bd4c158
+[REMOTE_FUNC] ReplicatedStorage.15e4a240-12a4-40ba-96f4-accb3bd4c158.__FUNCTION
+[REMOTE_EVENT] ReplicatedStorage.UpdateLeaderboardEvent
+[REMOTE_EVENT] ReplicatedStorage.PopUpEvent
+[REMOTE_EVENT] ReplicatedStorage.NotificationEvent
+[REMOTE_EVENT] ReplicatedStorage.Animation.Revolver.Remotes.CheckShot
+[REMOTE_EVENT] ReplicatedStorage.Animation.Revolver.Remotes.Reload
+[REMOTE_EVENT] ReplicatedStorage.Animation.Revolver.Remotes.S
+[REMOTE_EVENT] ReplicatedStorage.Animation.Ki.Remotes.CheckShot
+[REMOTE_EVENT] ReplicatedStorage.Animation.Ki.Remotes.Reload
+[REMOTE_EVENT] ReplicatedStorage.Animation.Ki.Remotes.S
+[REMOTE_EVENT] ReplicatedStorage.op
+[REMOTE_EVENT] ReplicatedStorage.Animation.Ki.Remotes.CheckShot
+[REMOTE_EVENT] ReplicatedStorage.Animation.Ki.Remotes.Reload
+[REMOTE_EVENT] ReplicatedStorage.Animation.Ki.Remotes.S
+[BINDABLE] Workspace.kovo_oo.Animate.PlayEmote [BindableFunction]
+[REMOTE_EVENT] Workspace.kovo_oo.FJsMovementAnticheat.OnPunishment
+[REMOTE_EVENT] Workspace.kovo_oo.RuneStone.Remotes.CheckShot
+[REMOTE_EVENT] Workspace.kovo_oo.RuneStone.Remotes.Reload
+[REMOTE_EVENT] Workspace.kovo_oo.RuneStone.Remotes.S
+[BINDABLE] Workspace.sdfjsdlfnksodf.Animate.PlayEmote [BindableFunction]
+[REMOTE_EVENT] Workspace.sdfjsdlfnksodf.FJsMovementAnticheat.OnPunishment
+[REMOTE_EVENT] Workspace.GATSMOR71.Sunset.Remotes.CheckShot
+[REMOTE_EVENT] Workspace.GATSMOR71.Sunset.Remotes.Reload
+[REMOTE_EVENT] Workspace.GATSMOR71.Sunset.Remotes.S
+[BINDABLE] Workspace.GATSMOR71.Animate.PlayEmote [BindableFunction]
+[REMOTE_EVENT] Workspace.GATSMOR71.FJsMovementAnticheat.OnPunishment
+[BINDABLE] Workspace.DunkerDust.Animate.PlayEmote [BindableFunction]
+[REMOTE_EVENT] Workspace.DunkerDust.FJsMovementAnticheat.OnPunishment
+[REMOTE_EVENT] Workspace.1patrik0689.Sniper.Remotes.CheckShot
+[REMOTE_EVENT] Workspace.1patrik0689.Sniper.Remotes.Reload
+[REMOTE_EVENT] Workspace.1patrik0689.Sniper.Remotes.S
+[BINDABLE] Workspace.1patrik0689.Animate.PlayEmote [BindableFunction]
+[REMOTE_EVENT] Workspace.1patrik0689.FJsMovementAnticheat.OnPunishment
+[INFO] ──── Character Analysis ─────────────────────────
+[CHARACTER] ====  DunkerDust  ====
+[HUMANOID] HP=100/100  WS=22  JP=30  HH=0.000  RigType=Enum.HumanoidRigType.R6
+[CHARACTER] Value: ObjectValue 'AnimSaves' = nil
+[CHARACTER] Script: LocalScript -> llp
+[CHARACTER] Script: LocalScript -> llp
+[CHARACTER] Script: LocalScript -> llp
+[CHARACTER] Script: LocalScript -> Old
+[CHARACTER] Script: Script -> Health
+[CHARACTER] Script: LocalScript -> Animate
+[CHARACTER] Value: StringValue 'idle' = 
+[CHARACTER] Value: NumberValue 'Weight' = 9
+[CHARACTER] Value: NumberValue 'Weight' = 1
+[CHARACTER] Value: StringValue 'walk' = 
+[CHARACTER] Value: StringValue 'run' = 
+[CHARACTER] Value: StringValue 'jump' = 
+[CHARACTER] Value: StringValue 'climb' = 
+[CHARACTER] Value: StringValue 'toolnone' = 
+[CHARACTER] Value: StringValue 'fall' = 
+[CHARACTER] Value: StringValue 'sit' = 
+[CHARACTER] Value: NumberValue 'ScaleDampeningPercent' = 1
+[CHARACTER] Value: NumberValue 'FlightHeat' = 0
+[CHARACTER] Value: NumberValue 'SpeedHeat' = 0
+[CHARACTER] Value: NumberValue 'VelocityHeat' = 0
+[CHARACTER] HumanoidRootPart  Anchored=false  CanCollide=false  Mass=2.8
+[CHARACTER] Torso  Anchored=false  CanCollide=true  Mass=2.8
+[CHARACTER] Head  Anchored=false  CanCollide=true  Mass=1.4
+[CHARACTER] Value: StringValue 'AvatarPartScaleType' = Classic
+[INFO] ──── Tool / Backpack Analysis ───────────────────
+[TOOL] ==== Tools / Backpack ====
+[INFO] ──── Damage Keyword Scan ────────────────────────
+[DAMAGE_PATTERN] ReplicatedStorage.PopUpManager.Winner.Overlay.MainFrame.Kills  [TextLabel]  keyword=kill
+[DAMAGE_PATTERN] ReplicatedStorage.PopUpManager.dsa.Overlay.MainFrame.TabsFrame.GunTabButton  [TextButton]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.PopUpManager.StoreBar.Overlay.MainFrame.Gun  [TextButton]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.PopUpManager.RoundOverPopup.Overlay.MainFrame.Header.KillCount  [TextLabel]  keyword=kill
+[DAMAGE_PATTERN] ReplicatedStorage.PopUpManager.RoundOverPopup.Overlay.MainFrame.PlayerList.PlayerEntryTemplate.KillCount  [TextLabel]  keyword=kill
+[DAMAGE_PATTERN] ReplicatedStorage.PopUpManager.StatsGui.Overlay.MainFrame.CurrentStats.KillsBox  [Frame]  keyword=kill
+[DAMAGE_PATTERN] ReplicatedStorage.PopUpManager.StatsGui.Overlay.MainFrame.CurrentStats.KillsBox.KillsLabel  [TextLabel]  keyword=kill
+[DAMAGE_PATTERN] ReplicatedStorage.PopUpManager.SettingsGui.Overlay.MainFrame.BlackTab.ScrollingFrame.KillEffectSound  [Frame]  keyword=kill
+[DAMAGE_PATTERN] ReplicatedStorage.PopUpManager.SettingsGui.Overlay.MainFrame.BlackTab.ScrollingFrame.KillEffectType  [Frame]  keyword=kill
+[DAMAGE_PATTERN] ReplicatedStorage.PopUpManager.InventoryGui.Overlay.MainFrame.TabsFrame.GunTabButton  [TextButton]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.PopUpManager.InventoryGui.Overlay.MainFrame.TabsFrame.KillEffectTabButton  [TextButton]  keyword=kill
+[DAMAGE_PATTERN] ReplicatedStorage.SignalManager.SignalEvents.SwapWeapon  [BindableEvent]  keyword=weapon
+[DAMAGE_PATTERN] ReplicatedStorage.SignalManager.SignalEvents.FireWeapon  [BindableEvent]  keyword=fire
+[DAMAGE_PATTERN] ReplicatedStorage.SignalManager.SignalEvents.FireWeaponMoblie  [BindableEvent]  keyword=fire
+[DAMAGE_PATTERN] ReplicatedStorage.SignalManager.SignalEvents.ReloadWeapon  [BindableEvent]  keyword=weapon
+[DAMAGE_PATTERN] ReplicatedStorage.SignalManager.SignalEvents.AimWeapon  [BindableEvent]  keyword=weapon
+[DAMAGE_PATTERN] ReplicatedStorage.SignalManager.SignalEvents.InspectWeapon  [BindableEvent]  keyword=weapon
+[DAMAGE_PATTERN] ReplicatedStorage.RagdollTemplate.Hit  [Highlight]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.MeleeModules.MeleeFramework.Sounds.HitSound  [Sound]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.MeleeModules.MeleeFramework.HitMarker  [ImageLabel]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.MeleeModules.MeleeFrameworkBack.Sounds.HitSound  [Sound]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.MeleeModules.MeleeFrameworkBack.HitMarker  [ImageLabel]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.MeleeModules.Animations.Test.Shot  [Animation]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.MeleeModules.Animations.Kar.Shot  [Animation]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.MeleeModules.Animations.Ki.Shot  [Animation]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.MeleeModules.Animations.2Hand.Shot  [Animation]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.MeleeModules.Animations.BigSword.Shot  [Animation]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.MeleeModules.Sounds.HitSound  [Sound]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules  [Folder]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.ProjectileRender  [ModuleScript]  keyword=proj
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.GunFramework  [ModuleScript]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.GunFramework.Projectile  [ModuleScript]  keyword=proj
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.GunFramework.HitMarker  [ImageLabel]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.GunFramework.GunOverlay  [ScreenGui]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.GunFramework.GunOverlay.ScreenSize.Cross.Shotgun  [Frame]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.GunFramework.GunOverlayback  [ScreenGui]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.GunFramework.GunOverlayback.ScreenSize.Cross.Shotgun  [Frame]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.GunFramework.GunSounds  [Folder]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.GunFramework.GunSounds.GunShot  [Sound]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.GunFramework.GunSounds.HitSound  [Sound]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.GunFramework.GunSounds.SilentShot  [Sound]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.GunFramework.f.ScreenSize.Cross.Shotgun  [Frame]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.GunFramework.Sounds.HitSound  [Sound]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.BulletHandler  [ModuleScript]  keyword=bullet
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.Projectile  [ModuleScript]  keyword=proj
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.Animations.Sniper2.Shot  [Animation]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.Animations.SniperBack.Shot  [Animation]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.Animations.Sniper.Shot  [Animation]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.Animations.Pistol.Shot  [Animation]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.Tracer.Projectile's  [Folder]  keyword=proj
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.Tracer.Projectile's.Bullet  [Part]  keyword=bullet
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.Tracer.Projectile's.RedBullet  [Part]  keyword=bullet
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.Tracer.BulletImpactEffect  [Folder]  keyword=bullet
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.Remote.GunShot  [RemoteEvent]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.Remote.ProjectileFinished  [RemoteEvent]  keyword=proj
+[DAMAGE_PATTERN] ReplicatedStorage.ModuleScripts.GunModules.Remote.ProjectileRender  [RemoteEvent]  keyword=proj
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.CrossBow.Configuration.BulletForce  [NumberValue]  keyword=bullet
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.CrossBow.Configuration.DamageDropoff  [NumberValue]  keyword=damage
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.CrossBow.Configuration.FireRate  [NumberValue]  keyword=fire
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.CrossBow.Configuration.Damage  [NumberValue]  keyword=damage
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.CrossBow.Configuration.SwapPartsOnFire  [BoolValue]  keyword=fire
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.CrossBow.Audio.HitSound  [Sound]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.CrossBow.Audio.GunShot  [Sound]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.CrossBow.Remotes.CheckShot  [RemoteEvent]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.CrossBow.BodyAttach.Gun Sound  [Sound]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.SS.Remotes.CheckShot  [RemoteEvent]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.SS.Configuration.FireRate  [NumberValue]  keyword=fire
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.SS.Configuration.DamageDropoff  [NumberValue]  keyword=damage
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.SS.Configuration.Damage  [NumberValue]  keyword=damage
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.SS.Configuration.BulletForce  [NumberValue]  keyword=bullet
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.SS.Audio.HitSound  [Sound]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.SS.BodyAttach.Gun Sound  [Sound]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.EquipPrimaryWeapon  [RemoteEvent]  keyword=weapon
+[DAMAGE_PATTERN] ReplicatedStorage.CrateImages.GunCrate  [ImageLabel]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.CrateImages.KillEffects  [ImageLabel]  keyword=kill
+[DAMAGE_PATTERN] ReplicatedStorage.MobileControls.Frame.FireButton  [ImageButton]  keyword=fire
+[DAMAGE_PATTERN] ReplicatedStorage.AssetsToPreload.Animations.Test.Shot  [Animation]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.AssetsToPreload.Models.Combat  [Part]  keyword=combat
+[DAMAGE_PATTERN] ReplicatedStorage.AssetsToPreload.Models.FireAxe  [Part]  keyword=fire
+[DAMAGE_PATTERN] ReplicatedStorage.AssetsToPreload.Animations.SniperBack.Shot  [Animation]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.AssetsToPreload.Animations.Pistol.Shot  [Animation]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.AssetsToPreload.Animations.Sniper.Shot  [Animation]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Revolver.Configuration.BulletForce  [NumberValue]  keyword=bullet
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Revolver.Configuration.Damage  [NumberValue]  keyword=damage
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Revolver.Configuration.DamageDropoff  [NumberValue]  keyword=damage
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Revolver.Configuration.FireRate  [NumberValue]  keyword=fire
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Revolver.Remotes.CheckShot  [RemoteEvent]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Revolver.Audio.HitSound  [Sound]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Revolver.Audio.GunShot  [Sound]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Revolver.BodyAttach.Gun Sound  [Sound]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.Models.NewA4.Combat_Knife  [Part]  keyword=combat
+[DAMAGE_PATTERN] ReplicatedStorage.Models.NewA4.Combat_Shove  [Part]  keyword=combat
+[DAMAGE_PATTERN] ReplicatedStorage.Models.KillEffects  [Folder]  keyword=kill
+[DAMAGE_PATTERN] ReplicatedStorage.Models.NewA2.FeatherShot  [Part]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.Models.NewA2.Prismstrike  [Part]  keyword=strike
+[DAMAGE_PATTERN] ReplicatedStorage.Models.NewA2.WhiteCamo  [Part]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.Models.F.Spine_Shot  [Part]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.Models.NewA.RedShot  [Part]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.Models.Combat  [Part]  keyword=combat
+[DAMAGE_PATTERN] ReplicatedStorage.Models.FireAxe  [Part]  keyword=fire
+[DAMAGE_PATTERN] ReplicatedStorage.Ragdolls.9162047067.Hit  [Highlight]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.Ragdolls.10070292774.Hit  [Highlight]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.Ragdolls.10657157923.Hit  [Highlight]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.Ragdolls.4882168308.Hit  [Highlight]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.Ragdolls.10407108357.Hit  [Highlight]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.Ragdolls.9401979366.Hit  [Highlight]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Ki.Remotes.CheckShot  [RemoteEvent]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Ki.Configuration.FireRate  [NumberValue]  keyword=fire
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Ki.Configuration.DamageDropoff  [NumberValue]  keyword=damage
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Ki.Configuration.Damage  [NumberValue]  keyword=damage
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Ki.Configuration.BulletForce  [NumberValue]  keyword=bullet
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Ki.Audio.HitSound  [Sound]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Ki.BodyAttach.Gun Sound  [Sound]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Ki.Audio.HitSound  [Sound]  keyword=hit
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Ki.Configuration.BulletForce  [NumberValue]  keyword=bullet
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Ki.Configuration.Damage  [NumberValue]  keyword=damage
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Ki.Configuration.DamageDropoff  [NumberValue]  keyword=damage
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Ki.Configuration.FireRate  [NumberValue]  keyword=fire
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Ki.Remotes.CheckShot  [RemoteEvent]  keyword=shot
+[DAMAGE_PATTERN] ReplicatedStorage.Animation.Ki.BodyAttach.Gun Sound  [Sound]  keyword=gun
+[DAMAGE_PATTERN] ReplicatedStorage.DeathAssets.FlamesP.FIRE  [ParticleEmitter]  keyword=fire
+[DAMAGE_PATTERN] Workspace.Lobby.LeaderboardPart.LeaderboardGui1.MainFrame.List.Template.Kills  [TextLabel]  keyword=kill
+[DAMAGE_PATTERN] Workspace.Lobby.LeaderboardPart.LeaderboardGui1.MainFrame.List.Rank1.Kills  [TextLabel]  keyword=kill
+[DAMAGE_PATTERN] Workspace.Lobby.LeaderboardPart.LeaderboardGui1.MainFrame.List.Rank2.Kills  [TextLabel]  keyword=kill
+[DAMAGE_PATTERN] Workspace.Lobby.LeaderboardPart.LeaderboardGui1.MainFrame.List.Rank3.Kills  [TextLabel]  keyword=kill
+[DAMAGE_PATTERN] Workspace.Lobby.LeaderboardPart.LeaderboardGui1.MainFrame.List.Rank4.Kills  [TextLabel]  keyword=kill
+[DAMAGE_PATTERN] Workspace.Lobby.LeaderboardPart.LeaderboardGui1.MainFrame.List.Rank5.Kills  [TextLabel]  keyword=kill
+[DAMAGE_PATTERN] Workspace.Lobby.LeaderboardPart.LeaderboardGui1.MainFrame.List.Rank6.Kills  [TextLabel]  keyword=kill
+[DAMAGE_PATTERN] Workspace.Lobby.LeaderboardPart.LeaderboardGui1.MainFrame.List.Rank7.Kills  [TextLabel]  keyword=kill
+[DAMAGE_PATTERN] Workspace.Lobby.LeaderboardPart.LeaderboardGui1.MainFrame.List.Rank8.Kills  [TextLabel]  keyword=kill
+[DAMAGE_PATTERN] Workspace.Lobby.LeaderboardPart.LeaderboardGui1.MainFrame.List.Rank9.Kills  [TextLabel]  keyword=kill
+[DAMAGE_PATTERN] Workspace.Lobby.LeaderboardPart.LeaderboardGui1.MainFrame.List.Rank10.Kills  [TextLabel]  keyword=kill
+[DAMAGE_PATTERN] Workspace.Lobby.LeaderboardPart.LeaderboardGui1.MainFrame.MyStats.MyKills  [TextLabel]  keyword=kill
+[DAMAGE_PATTERN] Workspace.HitEffectStorage  [Folder]  keyword=hit
+[DAMAGE_PATTERN] Workspace.kovo_oo.llp.Sounds.Heal  [Sound]  keyword=heal
+[DAMAGE_PATTERN] Workspace.kovo_oo.Health  [Script]  keyword=health
+[DAMAGE_PATTERN] Workspace.kovo_oo.RuneStone.Audio.HitSound  [Sound]  keyword=hit
+[DAMAGE_PATTERN] Workspace.kovo_oo.RuneStone.Audio.GunShot  [Sound]  keyword=gun
+[DAMAGE_PATTERN] Workspace.kovo_oo.RuneStone.Remotes.CheckShot  [RemoteEvent]  keyword=shot
+[DAMAGE_PATTERN] Workspace.kovo_oo.RuneStone.BodyAttach.Gun Sound  [Sound]  keyword=gun
+[DAMAGE_PATTERN] Workspace.sdfjsdlfnksodf.llp.Sounds.Heal  [Sound]  keyword=heal
+[DAMAGE_PATTERN] Workspace.sdfjsdlfnksodf.Health  [Script]  keyword=health
+[DAMAGE_PATTERN] Workspace.bulletStorage  [Folder]  keyword=bullet
+[DAMAGE_PATTERN] Workspace.HitEffect  [Folder]  keyword=hit
+[DAMAGE_PATTERN] Workspace.GATSMOR71.Sunset.Audio.HitSound  [Sound]  keyword=hit
+[DAMAGE_PATTERN] Workspace.GATSMOR71.Sunset.Audio.GunShot  [Sound]  keyword=gun
+[DAMAGE_PATTERN] Workspace.GATSMOR71.Sunset.Remotes.CheckShot  [RemoteEvent]  keyword=shot
+[DAMAGE_PATTERN] Workspace.GATSMOR71.Sunset.BodyAttach.Gun Sound  [Sound]  keyword=gun
+[DAMAGE_PATTERN] Workspace.GATSMOR71.llp.Sounds.Heal  [Sound]  keyword=heal
+[DAMAGE_PATTERN] Workspace.GATSMOR71.Health  [Script]  keyword=health
+[DAMAGE_PATTERN] Workspace.DunkerDust.llp.Sounds.Heal  [Sound]  keyword=heal
+[DAMAGE_PATTERN] Workspace.DunkerDust.Health  [Script]  keyword=health
+[DAMAGE_PATTERN] Workspace.1patrik0689.Sniper.Audio.HitSound  [Sound]  keyword=hit
+[DAMAGE_PATTERN] Workspace.1patrik0689.Sniper.Audio.GunShot  [Sound]  keyword=gun
+[DAMAGE_PATTERN] Workspace.1patrik0689.Sniper.Remotes.CheckShot  [RemoteEvent]  keyword=shot
+[DAMAGE_PATTERN] Workspace.1patrik0689.Sniper.BodyAttach.Gun Sound  [Sound]  keyword=gun
+[DAMAGE_PATTERN] Workspace.1patrik0689.llp.Sounds.Heal  [Sound]  keyword=heal
+[DAMAGE_PATTERN] Workspace.1patrik0689.Health  [Script]  keyword=health
+[INFO] ──── Workspace Analysis ─────────────────────────
+[WORKSPACE] ==== Workspace ====
+[WORKSPACE] Folder: jks (39 children)
+[WORKSPACE] Folder: Lobby (105 children)
+[WORKSPACE] Folder: Folder (0 children)
+[WORKSPACE] Folder: PixelArt (0 children)
+[WORKSPACE] Folder: PixelArt (0 children)
+[WORKSPACE] Folder: PixelArt (0 children)
+[WORKSPACE] Folder: PixelArt (0 children)
+[WORKSPACE] Folder: PixelArt (0 children)
+[WORKSPACE] Folder: PixelArt (0 children)
+[WORKSPACE] Folder: PixelArt (0 children)
+[WORKSPACE] Folder: ServerDebug (0 children)
+[WORKSPACE] Folder: HitEffectStorage (0 children)  *** DAMAGE FOLDER [kw=hit] ***
+[WORKSPACE] Folder: bulletStorage (0 children)  *** DAMAGE FOLDER [kw=bullet] ***
+[WORKSPACE] Folder: HitEffect (0 children)  *** DAMAGE FOLDER [kw=hit] ***
+[WORKSPACE] Folder: 7 (4 children)
+[INFO] ──── PlayerGui ──────────────────────────────────
+[INFO] ==== PlayerGui ====
+[INFO] GUI: NotificationGui  [ScreenGui]
+[INFO] GUI: SmallNotificationGui  [ScreenGui]
+[INFO] GUI: RoundGUI  [ScreenGui]
+[INFO] GUI: LobbyMenu  [ScreenGui]
+[INFO] GUI: MobileControls  [ScreenGui]
+[INFO] GUI: CoreScripts  [ScreenGui]
+[INFO] GUI: Spectator  [LocalScript]
+[INFO] GUI: Replicate  [LocalScript]
+[INFO] GUI: FpsSystem  [ScreenGui]
+[INFO] GUI: Effect  [ScreenGui]
+[INFO] GUI: 1C6A033C-9B85-4E35-83ED-73BD03D0DCAF  [ScreenGui]
+[INFO] ──── Players ────────────────────────────────────
+[PLAYER] ==== Players (6) ====
+[PLAYER] DunkerDust (id=4882168308)  HP=100/100  [YOU]
+[PLAYER] sdfjsdlfnksodf (id=10657157923)  HP=100/100
+[PLAYER] GATSMOR71 (id=10070292774)  HP=100/100
+[PLAYER] kovo_oo (id=9162047067)  HP=100/100
+[PLAYER] 1patrik0689 (id=10407108357)  HP=100/100
+[PLAYER] PODUSHKA762 (id=9401979366)
+[INFO] ──── Hooks ──────────────────────────────────────
+[HOOK] __namecall installed  (FireServer, InvokeServer, Raycasts)
+[HOOK] Tool activation hooks installed
+[INFO] ──── SCAN COMPLETE ──────────────────────────────
+[INFO] Total log entries : 336
+[INFO] Hooks active — monitoring live remote calls...
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[S2C] [03:49:32] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:52")
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[S2C] [03:49:33] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:51")
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[FIRE] [03:49:33] C2S  Workspace  ()
+[INVOKE] [03:49:33] C2S  Workspace  ()
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[S2C] [03:49:34] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:50")
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[S2C] [03:49:35] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:49")
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[S2C] [03:49:36] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:48")
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[S2C] [03:49:37] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:47")
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[S2C] [03:49:38] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:46")
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[S2C] [03:49:38] S2C  ReplicatedStorage.SoundModule.Sound_PlayOnClient_S2C  ([Part] Workspace.kovo_oo.Torso, "rbxassetid://3821795742")
+[S2C] [03:49:38] S2C  ReplicatedStorage.ModuleScripts.GunModules.Remote.ProjectileRender  ({Wind=V3(0.00,0.00,0.00), Index=1775130576.213, Origin=V3(60.38,30.95,-85.82), Owner=[Model] Workspace.kovo_oo, Endpoint=V3(65.29,-174.06,681.79), Life=5, Force=130, Type="Bullet", Gravity=0})
+[S2C] [03:49:38] S2C  ReplicatedStorage.ModuleScripts.GunModules.Remote.ProjectileFinished  ({Index=1775130576.213, LaserEmission=1, CFrame=CF(61.69,25.93,-65.21), ExpRadius=15, LaserColor=[Color3], LaserSpeed=10, LaserTime=0.7, Effect="Gib_T", ExpColor=[Color3], LaserTexture="rbxassetid://4813348676", ...})
+[S2C] [03:49:38] S2C  ReplicatedStorage.Remotes.UpdateLeaderboard  ("UPDATE_ALL", {1={verified=false, score=7, userId=9162047067}, 2={verified=false, score=3, userId=4882168308}, 3={verified=false, score=1, userId=10070292774}, 4={verified=false, score=0, userId=10657157923}, 5={verified=false, score=0, userId=10407108357}, 6={verified=false, score=0, userId=9401979366}})
+[S2C] [03:49:38] S2C  ReplicatedStorage.Remotes.Death  (10070292774, V3(61.61,30.88,-91.68), CF(62.58,26.00,-68.99), "BlackHoleEffect")
+[FIRE] [03:49:38] C2S  Workspace  ()
+[INVOKE] [03:49:38] C2S  Workspace  ()
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[S2C] [03:49:39] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:45")
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[S2C] [03:49:40] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:44")
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[S2C] [03:49:41] S2C  ReplicatedStorage.SoundModule.Sound_PlayOnClient_S2C  ([Part] Workspace.kovo_oo.Torso, "rbxassetid://3821795742")
+[S2C] [03:49:41] S2C  ReplicatedStorage.ModuleScripts.GunModules.Remote.ProjectileRender  ({Wind=V3(0.00,0.00,0.00), Index=1775130578.787, Origin=V3(49.30,25.98,-112.21), Owner=[Model] Workspace.kovo_oo, Endpoint=V3(-699.36,-97.46,-347.93), Life=5, Force=130, Type="Bullet", Gravity=0})
+[S2C] [03:49:41] S2C  ReplicatedStorage.ModuleScripts.GunModules.Remote.ProjectileFinished  ({Index=1775130578.787, LaserEmission=1, CFrame=CF(39.38,25.15,-114.12), ExpRadius=15, LaserColor=[Color3], LaserSpeed=10, LaserTime=0.7, Effect="Gib_T", ExpColor=[Color3], LaserTexture="rbxassetid://4813348676", ...})
+[S2C] [03:49:41] S2C  ReplicatedStorage.Remotes.UpdateLeaderboard  ("UPDATE_ALL", {1={verified=false, score=8, userId=9162047067}, 2={verified=false, score=3, userId=4882168308}, 3={verified=false, score=1, userId=10070292774}, 4={verified=false, score=0, userId=10657157923}, 5={verified=false, score=0, userId=10407108357}, 6={verified=false, score=0, userId=9401979366}})
+[S2C] [03:49:41] S2C  ReplicatedStorage.Remotes.Death  (10407108357, V3(54.31,25.99,-108.10), CF(39.11,26.00,-109.39), "BlackHoleEffect")
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[S2C] [03:49:41] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:43")
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[S2C] [03:49:42] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:42")
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: FindPartOnRayWithIgnoreList  on  Workspace
+[HOOK] Raycast: Raycast  on  Workspace
+
+=== LIVE REMOTE LOG ===
+[03:49:32] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:52")
+[03:49:33] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:51")
+[03:49:33] C2S  Workspace  ()
+[03:49:33] C2S  Workspace  ()
+[03:49:34] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:50")
+[03:49:35] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:49")
+[03:49:36] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:48")
+[03:49:37] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:47")
+[03:49:38] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:46")
+[03:49:38] S2C  ReplicatedStorage.SoundModule.Sound_PlayOnClient_S2C  ([Part] Workspace.kovo_oo.Torso, "rbxassetid://3821795742")
+[03:49:38] S2C  ReplicatedStorage.ModuleScripts.GunModules.Remote.ProjectileRender  ({Wind=V3(0.00,0.00,0.00), Index=1775130576.213, Origin=V3(60.38,30.95,-85.82), Owner=[Model] Workspace.kovo_oo, Endpoint=V3(65.29,-174.06,681.79), Life=5, Force=130, Type="Bullet", Gravity=0})
+[03:49:38] S2C  ReplicatedStorage.ModuleScripts.GunModules.Remote.ProjectileFinished  ({Index=1775130576.213, LaserEmission=1, CFrame=CF(61.69,25.93,-65.21), ExpRadius=15, LaserColor=[Color3], LaserSpeed=10, LaserTime=0.7, Effect="Gib_T", ExpColor=[Color3], LaserTexture="rbxassetid://4813348676", ...})
+[03:49:38] S2C  ReplicatedStorage.Remotes.UpdateLeaderboard  ("UPDATE_ALL", {1={verified=false, score=7, userId=9162047067}, 2={verified=false, score=3, userId=4882168308}, 3={verified=false, score=1, userId=10070292774}, 4={verified=false, score=0, userId=10657157923}, 5={verified=false, score=0, userId=10407108357}, 6={verified=false, score=0, userId=9401979366}})
+[03:49:38] S2C  ReplicatedStorage.Remotes.Death  (10070292774, V3(61.61,30.88,-91.68), CF(62.58,26.00,-68.99), "BlackHoleEffect")
+[03:49:38] C2S  Workspace  ()
+[03:49:38] C2S  Workspace  ()
+[03:49:39] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:45")
+[03:49:40] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:44")
+[03:49:41] S2C  ReplicatedStorage.SoundModule.Sound_PlayOnClient_S2C  ([Part] Workspace.kovo_oo.Torso, "rbxassetid://3821795742")
+[03:49:41] S2C  ReplicatedStorage.ModuleScripts.GunModules.Remote.ProjectileRender  ({Wind=V3(0.00,0.00,0.00), Index=1775130578.787, Origin=V3(49.30,25.98,-112.21), Owner=[Model] Workspace.kovo_oo, Endpoint=V3(-699.36,-97.46,-347.93), Life=5, Force=130, Type="Bullet", Gravity=0})
+[03:49:41] S2C  ReplicatedStorage.ModuleScripts.GunModules.Remote.ProjectileFinished  ({Index=1775130578.787, LaserEmission=1, CFrame=CF(39.38,25.15,-114.12), ExpRadius=15, LaserColor=[Color3], LaserSpeed=10, LaserTime=0.7, Effect="Gib_T", ExpColor=[Color3], LaserTexture="rbxassetid://4813348676", ...})
+[03:49:41] S2C  ReplicatedStorage.Remotes.UpdateLeaderboard  ("UPDATE_ALL", {1={verified=false, score=8, userId=9162047067}, 2={verified=false, score=3, userId=4882168308}, 3={verified=false, score=1, userId=10070292774}, 4={verified=false, score=0, userId=10657157923}, 5={verified=false, score=0, userId=10407108357}, 6={verified=false, score=0, userId=9401979366}})
+[03:49:41] S2C  ReplicatedStorage.Remotes.Death  (10407108357, V3(54.31,25.99,-108.10), CF(39.11,26.00,-109.39), "BlackHoleEffect")
+[03:49:41] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:43")
+[03:49:42] S2C  ReplicatedStorage.Remotes.UpdateRoundInfo  ("Time Remaining", "3:42")
